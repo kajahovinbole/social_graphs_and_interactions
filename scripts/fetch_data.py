@@ -1,37 +1,67 @@
-
 import csv
 import os
 import re
 import time
+import json
+import hashlib
 import requests
 
+from datetime import datetime, timezone
 from collections import defaultdict
 
 
 # ============================================================
 # CONFIGURATION
+# Change these values when creating a new dataset
 # ============================================================
 
-BASE_URL = "https://musicbrainz.org/ws/2/recording"
-
-INPUT_FILE = "project/data/data_2005_2025/pop_artists.csv"
-OUTPUT_DIR = "project/data/data_2005_2025"
+# Dataset
+DATASET_NAME = "data_2005_2025"
 
 START_YEAR = 2005
 END_YEAR = 2025
 
-PAGE_SIZE = 100
+# Input / output
+INPUT_FILE = f"project/data/{DATASET_NAME}/pop_artists.csv"
+OUTPUT_DIR = f"project/data/{DATASET_NAME}"
 
+# Recording filters
+EXCLUDE_ALT_VERSIONS = True
+
+ALT_VERSION_KEYWORDS = [
+    "live",
+    "remix",
+    "remastered",
+    "acoustic",
+    "demo",
+    "instrumental",
+    "karaoke",
+    "radio edit",
+    "extended version"
+]
+
+# API settings
+BASE_URL = "https://musicbrainz.org/ws/2/recording"
+
+PAGE_SIZE = 100
 MAX_RETRIES = 6
 REQUEST_DELAY = 1.1
+REQUEST_TIMEOUT = 30
 
+# Save raw API data for reproducibility
+SAVE_RAW_RECORDINGS = True
+
+# API identification
 HEADERS = {
     "User-Agent": "MusicCollaborationResearch/1.0 (student research project)"
 }
 
+
+# Compile alternative version filter
 ALT_VERSION_PATTERN = re.compile(
-    r"\b(live|remix|remastered|acoustic|demo|instrumental|"
-    r"karaoke|radio edit|extended version)\b",
+    r"\b(" + "|".join(
+        re.escape(word) for word in ALT_VERSION_KEYWORDS
+    ) + r")\b",
     re.IGNORECASE
 )
 
@@ -55,11 +85,12 @@ def load_artists():
             if mbid and name:
                 artists[mbid] = name
 
+    # Sort for deterministic processing
+    artists = dict(sorted(artists.items()))
+
     print(f"Loaded {len(artists)} selected artists.")
 
     return artists
-
-
 
 
 # ============================================================
@@ -76,9 +107,10 @@ def api_get(params):
                 BASE_URL,
                 params=params,
                 headers=HEADERS,
-                timeout=30
+                timeout=REQUEST_TIMEOUT
             )
 
+            # Handle rate limiting and temporary server errors
             if response.status_code in (429, 503):
 
                 retry_after = response.headers.get("Retry-After")
@@ -187,6 +219,9 @@ def is_in_period(recording):
 def is_valid_recording(title):
     """Exclude alternative versions based on recording title."""
 
+    if not EXCLUDE_ALT_VERSIONS:
+        return True
+
     return not ALT_VERSION_PATTERN.search(title)
 
 
@@ -224,6 +259,7 @@ def extract_collaborations(all_recordings, selected_artists):
 
         for credit in recording.get("artist-credit", []):
 
+            # Ignore join phrases such as "feat."
             if not isinstance(credit, dict):
                 continue
 
@@ -248,10 +284,39 @@ def extract_collaborations(all_recordings, selected_artists):
             )
         }
 
-    return collaborations
+    return dict(sorted(collaborations.items()))
 
 
+# ============================================================
+# SAVE RAW RECORDINGS
+# ============================================================
 
+def save_raw_recordings(all_recordings):
+    """Save raw MusicBrainz responses for reproducibility."""
+
+    if not SAVE_RAW_RECORDINGS:
+        return
+
+    output_path = os.path.join(
+        OUTPUT_DIR,
+        "raw_recordings.json"
+    )
+
+    sorted_recordings = [
+        all_recordings[key]
+        for key in sorted(all_recordings)
+    ]
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(
+            sorted_recordings,
+            f,
+            ensure_ascii=False,
+            indent=2,
+            sort_keys=True
+        )
+
+    print(f"Saved raw recordings to {output_path}")
 
 
 # ============================================================
@@ -288,7 +353,7 @@ def build_network(selected_artists, collaborations):
 
         writer.writerow(["mbid", "name"])
 
-        for artist_id, name in selected_artists.items():
+        for artist_id, name in sorted(selected_artists.items()):
 
             writer.writerow([artist_id, name])
 
@@ -304,7 +369,7 @@ def build_network(selected_artists, collaborations):
 
         writer.writerow(["source", "target", "weight"])
 
-        for (source, target), weight in edge_weights.items():
+        for (source, target), weight in sorted(edge_weights.items()):
 
             writer.writerow([source, target, weight])
 
@@ -325,7 +390,7 @@ def build_network(selected_artists, collaborations):
             "first_release_date"
         ])
 
-        for recording_id, recording in collaborations.items():
+        for recording_id, recording in sorted(collaborations.items()):
 
             names = [
                 selected_artists[artist_id]
@@ -343,26 +408,103 @@ def build_network(selected_artists, collaborations):
     # Summary
     # --------------------------------------------------------
 
+    connected_artists = {
+        artist
+        for edge in edge_weights
+        for artist in edge
+    }
+
+    isolated = len(selected_artists) - len(connected_artists)
+
+    summary = {
+        "selected_artists": len(selected_artists),
+        "collaboration_recordings": len(collaborations),
+        "unique_edges": len(edge_weights),
+        "connected_artists": len(connected_artists),
+        "isolated_artists": isolated
+    }
+
     print("\n========== NETWORK SUMMARY ==========")
 
-    print(f"Selected artists: {len(selected_artists)}")
-    print(f"Collaboration recordings: {len(collaborations)}")
-    print(f"Unique edges: {len(edge_weights)}")
-
-    isolated = len(selected_artists) - len(
-        set(
-            artist
-            for edge in edge_weights
-            for artist in edge
-        )
-    )
-
-    print(f"Isolated artists: {isolated}")
+    for key, value in summary.items():
+        print(f"{key.replace('_', ' ').capitalize()}: {value}")
 
     print("\nFiles saved:")
     print(f"  {artists_path}")
     print(f"  {edges_path}")
     print(f"  {recordings_path}")
+
+    return summary
+
+
+# ============================================================
+# SAVE METADATA
+# ============================================================
+
+def save_metadata(selected_artists, all_recordings, summary):
+    """Save dataset configuration and retrieval information."""
+
+    # Hash of input artist file
+    with open(INPUT_FILE, "rb") as f:
+        input_hash = hashlib.sha256(f.read()).hexdigest()
+
+    metadata = {
+        "dataset": DATASET_NAME,
+
+        "date_retrieved": datetime.now(
+            timezone.utc
+        ).isoformat(),
+
+        "source": "MusicBrainz",
+        "source_url": BASE_URL,
+
+        "configuration": {
+            "start_year": START_YEAR,
+            "end_year": END_YEAR,
+            "exclude_alt_versions": EXCLUDE_ALT_VERSIONS,
+            "excluded_keywords": ALT_VERSION_KEYWORDS,
+            "page_size": PAGE_SIZE,
+            "max_retries": MAX_RETRIES,
+            "request_delay": REQUEST_DELAY
+        },
+
+        "input": {
+            "file": INPUT_FILE,
+            "sha256": input_hash
+        },
+
+        "data_statistics": {
+            "selected_artists": len(selected_artists),
+            "unique_recordings_fetched": len(all_recordings),
+            "recordings_with_release_date": sum(
+                bool(r.get("first-release-date"))
+                for r in all_recordings.values()
+            ),
+            "recordings_in_period": sum(
+                is_in_period(r)
+                for r in all_recordings.values()
+            )
+        },
+
+        "network_statistics": summary,
+
+        "raw_data_saved": SAVE_RAW_RECORDINGS
+    }
+
+    metadata_path = os.path.join(
+        OUTPUT_DIR,
+        "metadata.json"
+    )
+
+    with open(metadata_path, "w", encoding="utf-8") as f:
+        json.dump(
+            metadata,
+            f,
+            ensure_ascii=False,
+            indent=4
+        )
+
+    print(f"\nSaved metadata to {metadata_path}")
 
 
 # ============================================================
@@ -373,8 +515,10 @@ def main():
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
+    # Load selected artists
     selected_artists = load_artists()
 
+    # Fetch recordings
     all_recordings = {}
 
     print("\nFetching recordings from MusicBrainz...\n")
@@ -392,32 +536,34 @@ def main():
 
         all_recordings.update(recordings)
 
-        print("\n========== RECORDING STATISTICS ==========")
-
-        print("Total recordings:", len(all_recordings))
-
-        in_period = [
-            r for r in all_recordings.values()
-            if is_in_period(r)
-        ]
-
-        print("Recordings in period:", len(in_period))
-
-        with_date = [
-            r for r in all_recordings.values()
-            if r.get("first-release-date")
-        ]
-
-        print("Recordings with release date:", len(with_date))
-
         print(
             f"  Retrieved {len(recordings)} unique recordings. "
             f"Total: {len(all_recordings)}"
         )
 
-    print("\n======================================")
-    print(f"Total unique recordings fetched: {len(all_recordings)}")
+    # Recording statistics
+    print("\n========== RECORDING STATISTICS ==========")
 
+    print("Total unique recordings:", len(all_recordings))
+
+    in_period = [
+        r for r in all_recordings.values()
+        if is_in_period(r)
+    ]
+
+    print("Recordings in period:", len(in_period))
+
+    with_date = [
+        r for r in all_recordings.values()
+        if r.get("first-release-date")
+    ]
+
+    print("Recordings with release date:", len(with_date))
+
+    # Save raw API data
+    save_raw_recordings(all_recordings)
+
+    # Extract collaborations
     print("\nFiltering recordings and extracting collaborations...")
 
     collaborations = extract_collaborations(
@@ -425,10 +571,20 @@ def main():
         selected_artists
     )
 
-    build_network(
+    # Build network and save CSV files
+    summary = build_network(
         selected_artists,
         collaborations
     )
+
+    # Save metadata
+    save_metadata(
+        selected_artists,
+        all_recordings,
+        summary
+    )
+
+    print("\nDataset generation complete.")
 
 
 if __name__ == "__main__":
