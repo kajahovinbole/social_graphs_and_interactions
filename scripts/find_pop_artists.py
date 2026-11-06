@@ -4,22 +4,34 @@ import os
 import time
 import requests
 from collections import defaultdict
+import json
+from datetime import datetime, timezone
 
 # -----------------------------
-# CONFIG
+# CONFIGURATION
 # -----------------------------
 
+# Dataset
+DATASET_NAME = "data_2005_2025"
 START_YEAR = 2005
 END_YEAR = 2025
 
-PAGE_SIZE = 100
-MAX_RESULTS_PER_YEAR = 500
-
-# Minimum number of pop recordings required
+# MusicBrainz search
+GENRE_TAG = "pop"
 MIN_RECORDINGS = 6
 
-OUTPUT_FILE = "project/data/data_2005_2025/pop_artists.csv"
+# API settings
+PAGE_SIZE = 100
+MAX_RESULTS_PER_YEAR = 500
+REQUEST_DELAY = 1.1
+MAX_RETRIES = 6
+TIMEOUT = 30
 
+# Output
+OUTPUT_DIR = f"project/data/{DATASET_NAME}"
+OUTPUT_FILE = f"{OUTPUT_DIR}/pop_artists.csv"
+
+# API
 BASE_URL = "https://musicbrainz.org/ws/2/recording"
 
 HEADERS = {
@@ -40,7 +52,7 @@ def api_get(params, max_retries=6):
                 BASE_URL,
                 params=params,
                 headers=HEADERS,
-                timeout=30
+                timeout=TIMEOUT
             )
 
             if response.status_code == 503 or response.status_code == 429:
@@ -51,7 +63,7 @@ def api_get(params, max_retries=6):
 
             response.raise_for_status()
 
-            time.sleep(1.1)
+            time.sleep(REQUEST_DELAY)
             return response.json()
 
         except requests.exceptions.RequestException as e:
@@ -73,8 +85,8 @@ def api_get(params, max_retries=6):
 def fetch_year(year):
 
     query = (
-        f"tag:pop AND "
-        f"firstreleasedate:[{year} TO {year}]"
+    f"tag:{GENRE_TAG} AND "
+    f"firstreleasedate:[{year} TO {year}]"
     )
 
     print(f"\nFetching recordings from {year}...")
@@ -193,6 +205,31 @@ def save_artists(artists):
 
     print(f"\nSaved {len(artists)} artists to {OUTPUT_FILE}")
 
+# -----------------------------
+# Save JSON
+# -----------------------------
+
+def save_metadata():
+
+    metadata = {
+        "dataset": DATASET_NAME,
+        "start_year": START_YEAR,
+        "end_year": END_YEAR,
+        "genre_tag": GENRE_TAG,
+        "min_recordings": MIN_RECORDINGS,
+        "page_size": PAGE_SIZE,
+        "max_results_per_year": MAX_RESULTS_PER_YEAR,
+        "source": "MusicBrainz",
+        "retrieved_at": datetime.now(timezone.utc).isoformat()
+    }
+
+    metadata_file = os.path.join(OUTPUT_DIR, "metadata.json")
+
+    with open(metadata_file, "w", encoding="utf-8") as f:
+        json.dump(metadata, f, indent=4)
+
+    print(f"Saved metadata to {metadata_file}")
+
 
 # -----------------------------
 # MAIN
@@ -219,6 +256,8 @@ def main():
     print(f"Artists with at least {MIN_RECORDINGS} recordings: {len(artists)}")
 
     save_artists(artists)
+
+    save_metadata()
 
     print("\nTop 20 artists:\n")
 
