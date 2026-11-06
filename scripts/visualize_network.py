@@ -21,7 +21,7 @@ from datetime import datetime, timezone
 DATASET_NAME = "data_2005_2025"
 
 # Input / output
-DATA_DIR = f"project/data/{DATASET_NAME}"
+DATA_DIR = "data/data_2005_2025/deduplicated/"
 
 ARTISTS_FILE = os.path.join(DATA_DIR, "artists.csv")
 EDGES_FILE = os.path.join(DATA_DIR, "edges.csv")
@@ -47,13 +47,13 @@ ALPHA = 0.2
 
 # Layout
 LAYOUT_SEED = 42
-LAYOUT_ITERATIONS = 150
+LAYOUT_ITERATIONS = 3000
 COMPONENT_SCALE = 150
-COMPONENT_SPACING = 450
+COMPONENT_SPACING = 1250
 
 # Node appearance
-NODE_SIZE_MIN = 10
-NODE_SIZE_MAX = 35
+NODE_SIZE_MIN = 1
+NODE_SIZE_MAX = 10
 
 # Edge appearance
 EDGE_WIDTH_SCALE = 0.5
@@ -192,34 +192,46 @@ def calculate_node_sizes(G):
 # CALCULATE COMPONENT POSITIONS
 # ============================================================
 
+
 def calculate_positions(components):
-    """Calculate deterministic positions for each component."""
+    """Calculate deterministic positions with size-adaptive spacing."""
 
     positions = {}
 
     if not components:
         return positions
 
-    # Arrange components in a grid
     cols = math.ceil(math.sqrt(len(components)))
 
     for i, component in enumerate(components):
 
-        # Sort nodes to ensure consistent input order
         component = component.subgraph(
             sorted(component.nodes())
         ).copy()
 
-        # Calculate layout separately for each component
+        n = component.number_of_nodes()
+
+        # Give larger components more physical space.
+        component_scale = 15 * math.sqrt(n)
+
         component_pos = nx.spring_layout(
             component,
             seed=LAYOUT_SEED,
             weight="weight",
-            iterations=LAYOUT_ITERATIONS,
-            scale=COMPONENT_SCALE
+            iterations=500,
+            scale=component_scale,
+            k=2 / math.sqrt(n),
         )
 
-        # Grid position
+        # Calculate actual component dimensions.
+        xs = [p[0] for p in component_pos.values()]
+        ys = [p[1] for p in component_pos.values()]
+
+        width = max(xs) - min(xs)
+        height = max(ys) - min(ys)
+
+
+        # Grid placement with enough room between components.
         row = i // cols
         col = i % cols
 
@@ -227,7 +239,6 @@ def calculate_positions(components):
         offset_y = -row * COMPONENT_SPACING
 
         for node, (x, y) in component_pos.items():
-
             positions[node] = (
                 float(x + offset_x),
                 float(y + offset_y)
