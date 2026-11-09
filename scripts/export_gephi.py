@@ -7,11 +7,12 @@ import networkx as nx
 # Paths
 PROJECT_DIR = Path(__file__).resolve().parents[1]
 DATA_DIR = PROJECT_DIR / "data" / "data_2005_2025" / "deduplicated"
+BACKBONE_DIR = DATA_DIR / "backbone"
 
 ARTISTS_FILE = DATA_DIR / "artists.csv"
-EDGES_FILE = DATA_DIR / "edges.csv"
+EDGES_FILE = BACKBONE_DIR / "edges_backbone_alpha_0.42.csv"
 
-OUTPUT_FILE = DATA_DIR / "collaboration_network.gexf"
+OUTPUT_FILE = DATA_DIR / "collaboration_network_backbone_alpha_0.42.gexf"
 
 
 def main():
@@ -30,7 +31,7 @@ def main():
             label=str(artist["name"])
         )
 
-    # Add collaboration edges
+    # Add edges
     for _, edge in edges.iterrows():
         G.add_edge(
             str(edge["source"]),

@@ -12,7 +12,7 @@ OUTPUT_DIR = DATA_DIR / "backbone"
 OUTPUT_DIR.mkdir(exist_ok=True)
 
 # Significance thresholds to investigate
-THRESHOLDS = [0.01, 0.05, 0.10]
+THRESHOLDS = [0.01, 0.05, 0.10, 0.15, 0.20, 0.30, 0.40, 0.42, 0.44, 0.46, 0.48, 0.50, 0.60]
 
 
 def calculate_disparity_filter(edges):
@@ -68,6 +68,18 @@ def main():
     print(f"Original edges: {len(edges)}")
 
     filtered = calculate_disparity_filter(edges)
+
+    print("\nAlpha distribution:")
+    print(filtered["alpha_min"].describe())
+
+    print("\nNumber of edges in alpha intervals:")
+    bins = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 1.0]
+
+    print(
+        pd.cut(filtered["alpha_min"], bins=bins)
+        .value_counts()
+        .sort_index()
+    )
 
     for alpha_threshold in THRESHOLDS:
         # Keep edge if significant for at least one endpoint
