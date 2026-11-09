@@ -6,7 +6,7 @@ import pandas as pd
 from sklearn.metrics import adjusted_rand_score
 
 # Folder containing the 10 CSV files
-CSV_DIR = Path("data/data_2005_2025/tables_commuties307")
+CSV_DIR = Path("data/data_2005_2025/backbone_mod_alpha042/tables_communities_325_326")
 
 # Column names in Gephi exports
 ID_COL = "Id"
