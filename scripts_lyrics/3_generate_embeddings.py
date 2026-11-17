@@ -9,8 +9,8 @@ from tqdm import tqdm
 # Configuration
 # --------------------------------------------------
 
-INPUT_FILE = Path("data_lyrics/lyrics.csv")
-OUTPUT_DIR = Path("data_lyrics/embeddings/")
+INPUT_FILE = Path("data_lyrics/hentet_lyrics_2/lyrics.csv")
+OUTPUT_DIR = Path("data_lyrics/embeddings/v2/")
 
 MODEL_NAME = "sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
 
@@ -115,6 +115,8 @@ def get_artist_embedding(song_embeddings):
 def load_lyrics():
     df = pd.read_csv(INPUT_FILE)
 
+    print(f"Rows before deduplication: {len(df)}")
+
     # Keep only rows with actual lyrics
     df = df[
         (df["found"] == True)
@@ -122,6 +124,8 @@ def load_lyrics():
         & (df["lyrics_text"].str.strip() != "")
         & df["artist_mbid"].notna()
     ].copy()
+
+    print(f"Rows after deduplication: {len(df)}")
 
     # Remove duplicate recordings
     df = df.drop_duplicates(

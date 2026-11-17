@@ -18,7 +18,7 @@ END_YEAR = 2025
 
 # MusicBrainz search
 GENRE_TAG = "pop"
-MIN_RECORDINGS = 6
+MIN_RECORDINGS = 3
 
 # API settings
 PAGE_SIZE = 100
@@ -28,7 +28,7 @@ MAX_RETRIES = 6
 TIMEOUT = 30
 
 # Output
-OUTPUT_DIR = f"project/data/{DATASET_NAME}"
+OUTPUT_DIR = f"data_network/min_3_recordings/{DATASET_NAME}"
 OUTPUT_FILE = f"{OUTPUT_DIR}/pop_artists.csv"
 
 # API

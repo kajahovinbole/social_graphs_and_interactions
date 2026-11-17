@@ -12,19 +12,19 @@ import umap
 # --------------------------------------------------
 
 EMBEDDINGS_PATH = Path(
-    "data_lyrics/embeddings/artist_embeddings.npy"
+    "data_lyrics/embeddings/v2/artist_embeddings.npy"
 )
 
 ARTIST_METADATA_PATH = Path(
-    "data_lyrics/embeddings/artist_metadata.csv"
+    "data_lyrics/embeddings/v2/artist_metadata.csv"
 )
 
 NETWORK_METADATA_PATH = Path(
-    "data_network/data_2005_2025/data_table.csv"
+    "data_network/1_new_2005_2025/network/network_deduplicated/louvain_communities.csv"
 )
 
 OUTPUT_DIR = Path(
-    "data_lyrics/visualizations"
+    "data_lyrics/visualizations/embeddings_v2"
 )
 
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -48,11 +48,11 @@ def load_data():
         )
 
     # Select artist ID and original Louvain community
-    network = network[["Id", "0"]].copy()
+    network = network[["mbid", "original_community"]].copy()
 
     network = network.rename(columns={
-        "Id": "artist_mbid",
-        "0": "community"
+        "mbid": "artist_mbid",
+        "original_community": "community"
     })
 
     # Ensure consistent ID format

@@ -5,11 +5,20 @@ import pandas as pd
 
 
 
-DATA_DIR = Path("data/data_2005_2025/deduplicated")
+PROJECT_DIR = Path(__file__).resolve().parents[1]
+
+DATA_DIR = (
+    PROJECT_DIR
+    / "data_network"
+    / "1_new_2005_2025"
+    / "network"
+    / "network_deduplicated"
+)
+
 EDGES_FILE = DATA_DIR / "edges.csv"
 
 OUTPUT_DIR = DATA_DIR / "backbone"
-OUTPUT_DIR.mkdir(exist_ok=True)
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # Significance thresholds to investigate
 THRESHOLDS = [0.01, 0.05, 0.10, 0.15, 0.20, 0.30, 0.40, 0.42, 0.44, 0.46, 0.48, 0.50, 0.60]

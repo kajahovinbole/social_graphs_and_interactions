@@ -2,72 +2,51 @@
 from pathlib import Path
 import pandas as pd
 import networkx as nx
+from networkx.algorithms.community import louvain_communities
+from networkx.algorithms.community.quality import modularity
 
 
-# Paths
+# --------------------------------------------------
+# PATHS
+# --------------------------------------------------
+
 PROJECT_DIR = Path(__file__).resolve().parents[1]
-DATA_DIR = PROJECT_DIR / "data" / "data_2005_2025" / "deduplicated"
-BACKBONE_DIR = DATA_DIR / "backbone"
 
-ARTISTS_FILE = DATA_DIR / "artists.csv"
-EDGES_FILE = BACKBONE_DIR / "edges_backbone_alpha_0.42.csv"
-
-# Original Louvain communities
-ORIGINAL_COMMUNITIES_FILE = (
-    PROJECT_DIR / "data" / "data_2005_2025"
-    / "tables_commuties307" / "mod_19_0685.csv"
+DATA_DIR = (
+    PROJECT_DIR
+    / "data_network"
+    / "1_new_2005_2025"
+    / "network"
 )
 
-OUTPUT_FILE = DATA_DIR / "collaboration_network_backbone_alpha_0.42.gexf"
+ARTISTS_FILE = DATA_DIR / "network_deduplicated/nodes.csv"
+EDGES_FILE = DATA_DIR / "backbone/edges_backbone_alpha_0.42.csv"
 
+OUTPUT_FILE = DATA_DIR / "backbone/collaboration_network.gexf"
+COMMUNITIES_FILE = DATA_DIR / "backbone/louvain_communities.csv"
+
+
+# --------------------------------------------------
+# MAIN
+# --------------------------------------------------
 
 def main():
 
-    # Load CSV files
     artists = pd.read_csv(ARTISTS_FILE)
     edges = pd.read_csv(EDGES_FILE)
-    communities = pd.read_csv(ORIGINAL_COMMUNITIES_FILE)
 
-    # Normalize column names
-    communities.columns = (
-        communities.columns.str.strip()
-        .str.lower()
-        .str.replace(" ", "_")
-    )
-
-    communities = communities.rename(columns={
-        "id": "mbid",
-        "modularity_class": "original_community"
-    })
-
-    # Keep only the information we need
-    communities = communities[["mbid", "original_community"]]
-    communities["mbid"] = communities["mbid"].astype(str)
-
-    # Create community lookup
-    community_lookup = dict(
-        zip(communities["mbid"], communities["original_community"])
-    )
-
-    # Create undirected graph
     G = nx.Graph()
 
-    # Add all artists, including isolated artists
+    # Add all artists, including isolates
     for _, artist in artists.iterrows():
-
         mbid = str(artist["mbid"])
-
-        community = community_lookup.get(mbid)
 
         G.add_node(
             mbid,
-            label=str(artist["name"]),
-            original_community=(
-                int(community) if pd.notna(community) else -1
-            )
+            label=str(artist["name"])
         )
 
-    # Add backbone edges
+    # Add weighted edges
     for _, edge in edges.iterrows():
         G.add_edge(
             str(edge["source"]),
@@ -75,21 +54,63 @@ def main():
             weight=int(edge["weight"])
         )
 
-    # Export to GEXF
-    nx.write_gexf(G, OUTPUT_FILE)
-
-    # Report
-    assigned = sum(
-        1 for _, data in G.nodes(data=True)
-        if data["original_community"] != -1
+    # Louvain community detection
+    communities = louvain_communities(
+        G,
+        weight="weight",
+        resolution=1,
+        seed=42
     )
 
-    print("Export complete!")
-    print(f"Nodes: {G.number_of_nodes()}")
-    print(f"Edges: {G.number_of_edges()}")
-    print(f"Artists with original community: {assigned}")
-    print(f"Artists without community: {G.number_of_nodes() - assigned}")
-    print(f"Saved to: {OUTPUT_FILE}")
+    # Map each artist to a community ID
+    community_lookup = {
+        node: community_id
+        for community_id, community in enumerate(communities)
+        for node in community
+    }
+
+    nx.set_node_attributes(
+        G,
+        community_lookup,
+        "original_community"
+    )
+
+    # Calculate modularity
+    modularity_score = modularity(
+        G,
+        communities,
+        weight="weight"
+    )
+
+    # Save community assignments
+    community_df = pd.DataFrame([
+        {
+            "mbid": node,
+            "name": G.nodes[node]["label"],
+            "original_community": community_lookup[node]
+        }
+        for node in G.nodes
+    ])
+
+    community_df.to_csv(COMMUNITIES_FILE, index=False)
+
+    # Export GEXF
+    nx.write_gexf(G, OUTPUT_FILE)
+
+    # Network statistics
+    assigned = len(community_lookup)
+
+    print("\nNETWORK ANALYSIS COMPLETE")
+    print("=" * 40)
+    print(f"Nodes:              {G.number_of_nodes()}")
+    print(f"Edges:              {G.number_of_edges()}")
+    print(f"Connected components: {nx.number_connected_components(G)}")
+    print(f"Communities:        {len(communities)}")
+    print(f"Modularity:         {modularity_score:.4f}")
+    print(f"Isolates:           {nx.number_of_isolates(G)}")
+    print(f"Artists assigned:   {assigned}")
+    print(f"\nGEXF saved to:       {OUTPUT_FILE}")
+    print(f"Communities saved:   {COMMUNITIES_FILE}")
 
 
 if __name__ == "__main__":

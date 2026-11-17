@@ -15,11 +15,11 @@ import requests
 
 PROJECT_DIR = Path(__file__).resolve().parents[1]
 
-INPUT_FILE = PROJECT_DIR / "data_lyrics" / "top_recordings.csv"
+INPUT_FILE = PROJECT_DIR / "data_lyrics" / "hentet_recordings_2" / "top_recordings.csv"
 
-OUTPUT_FILE = PROJECT_DIR / "data_lyrics" / "lyrics.csv"
-NOT_FOUND_FILE = PROJECT_DIR / "data_lyrics" / "not_found_lyrics.csv"
-INSTRUMENTAL_FILE = PROJECT_DIR / "data_lyrics" / "instrumental_songs.csv"
+OUTPUT_FILE = PROJECT_DIR / "data_lyrics" / "hentet_lyrics_2" / "lyrics.csv"
+NOT_FOUND_FILE = PROJECT_DIR / "data_lyrics" / "hentet_lyrics_2" / "not_found_lyrics.csv"
+INSTRUMENTAL_FILE = PROJECT_DIR / "data_lyrics" / "hentet_lyrics_2" / "instrumental_songs.csv"
 
 BASE_URL = "https://lrclib.net/api"
 
@@ -473,7 +473,7 @@ def save_outputs(results):
 
     # Songs where no verified match was found.
     not_found_df = result_df[
-        result_df["status"] == "not_found"
+        result_df["status"].isin(["not_found", "no_lyrics"])
     ].copy()
 
     NOT_FOUND_FILE.parent.mkdir(
