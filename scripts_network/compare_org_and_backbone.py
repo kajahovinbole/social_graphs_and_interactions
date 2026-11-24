@@ -7,13 +7,12 @@ PROJECT_DIR = Path(__file__).resolve().parents[1]
 
 DATA_DIR = (
     PROJECT_DIR
-    / "data_network"
-    / "1_new_2005_2025"
-    / "network"
+    / "data"
+    / "data_2005_2025_network"
 )
 
-NODES_FILE = DATA_DIR / "network_deduplicated/nodes.csv"
-ORIGINAL_EDGES = DATA_DIR / "network_deduplicated/edges.csv"
+NODES_FILE = DATA_DIR / "nodes.csv"
+ORIGINAL_EDGES = DATA_DIR / "edges.csv"
 BACKBONE_EDGES = (
     DATA_DIR / "backbone"
     / "edges_backbone_alpha_0.42.csv"

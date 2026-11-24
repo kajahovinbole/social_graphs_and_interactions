@@ -14,7 +14,7 @@ INPUT_FILE = Path(
 )
 
 MAPPING_FILE = Path(
-    "data_network/1_new_2005_2025/ouput_dedeplication/recording_deduplication_mapping.csv"
+    "data/data_2005_2025_network/deduplication/recording_deduplication_mapping.csv"
 )
 
 TARGET_IDS = [

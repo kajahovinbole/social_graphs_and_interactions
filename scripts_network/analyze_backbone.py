@@ -5,10 +5,10 @@ import pandas as pd
 import networkx as nx
 
 PROJECT_DIR = Path(__file__).resolve().parents[1]
-DATA_DIR = PROJECT_DIR / "data" / "data_2005_2025" / "deduplicated"
+DATA_DIR = PROJECT_DIR / "data" / "data_2005_2025_network"
 BACKBONE_DIR = DATA_DIR / "backbone"
 
-ARTISTS_FILE = PROJECT_DIR / "data" / "build_network" / "artists.csv"
+ARTISTS_FILE = DATA_DIR / "nodes.csv"
 
 artists = pd.read_csv(ARTISTS_FILE)
 artist_ids = artists["mbid"].astype(str).tolist()

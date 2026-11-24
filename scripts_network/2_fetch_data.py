@@ -361,7 +361,9 @@ def build_network(selected_artists, collaborations):
     # Save weighted edges
     # --------------------------------------------------------
 
-    edges_path = os.path.join(OUTPUT_DIR, "edges.csv")
+    # These are pre-deduplication edges. Keep them distinct from the final
+    # network edges created from manually reviewed unique songs in step 4.
+    edges_path = os.path.join(OUTPUT_DIR, "recording_level_edges.csv")
 
     with open(edges_path, "w", newline="", encoding="utf-8") as f:
 

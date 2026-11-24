@@ -9,10 +9,8 @@ PROJECT_DIR = Path(__file__).resolve().parents[1]
 
 DATA_DIR = (
     PROJECT_DIR
-    / "data_network"
-    / "1_new_2005_2025"
-    / "network"
-    / "network_deduplicated"
+    / "data"
+    / "data_2005_2025_network"
 )
 
 EDGES_FILE = DATA_DIR / "edges.csv"

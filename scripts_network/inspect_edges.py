@@ -1,6 +1,6 @@
 import pandas as pd
 
-edges = pd.read_csv("project/data/data_2005_2025/edges.csv")
+edges = pd.read_csv("data/data_2005_2025_network/edges.csv")
 
 print(edges["weight"].describe())
 

@@ -14,12 +14,11 @@ PROJECT_DIR = Path(__file__).resolve().parents[1]
 
 DATA_DIR = (
     PROJECT_DIR
-    / "data_network"
-    / "1_new_2005_2025"
-    / "network"
+    / "data"
+    / "data_2005_2025_network"
 )
 
-ARTISTS_FILE = DATA_DIR / "network_deduplicated/nodes.csv"
+ARTISTS_FILE = DATA_DIR / "nodes.csv"
 EDGES_FILE = DATA_DIR / "backbone/edges_backbone_alpha_0.42.csv"
 
 OUTPUT_FILE = DATA_DIR / "backbone/collaboration_network.gexf"

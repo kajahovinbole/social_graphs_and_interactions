@@ -18,15 +18,12 @@ from datetime import datetime, timezone
 # ============================================================
 
 # Dataset
-DATASET_NAME = "data_2005_2025"
+DATASET_NAME = "data_2005_2025_network"
 
 # Input / output
-DATA_DIR = "data/data_2005_2025/deduplicated/"
-
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ARTISTS_FILE = os.path.join(
-    PROJECT_DIR, "data", "build_network", "artists.csv"
-)
+DATA_DIR = os.path.join(PROJECT_DIR, "data", DATASET_NAME)
+ARTISTS_FILE = os.path.join(DATA_DIR, "nodes.csv")
 EDGES_FILE = os.path.join(DATA_DIR, "edges.csv")
 
 OUTPUT_FILE = os.path.join(

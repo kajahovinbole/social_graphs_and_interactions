@@ -17,14 +17,11 @@ import pandas as pd
 
 PROJECT_DIR = Path(__file__).resolve().parents[1]
 
-ARTISTS_FILE = PROJECT_DIR / "data" / "build_network" / "artists.csv"
+DATASET_DIR = PROJECT_DIR / "data" / "data_2005_2025_network"
 
-# Output from the manual duplicate-review workflow
-SONGS_FILE = Path("data_network/1_new_2005_2025/build_network/unique_songs_reviewed_3_3.csv")
-    
-
-# Keep this separate from the previous network outputs
-OUTPUT_DIR = Path("data_network/1_new_2005_2025/network/network_deduplicated")
+ARTISTS_FILE = DATASET_DIR / "artists.csv"
+SONGS_FILE = DATASET_DIR / "deduplication" / "unique_songs_reviewed.csv"
+OUTPUT_DIR = DATASET_DIR
 
 
 # --------------------------------------------------

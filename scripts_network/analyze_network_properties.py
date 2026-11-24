@@ -15,9 +15,8 @@ PROJECT_DIR = Path(__file__).resolve().parents[1]
 
 NETWORK_DIR = (
     PROJECT_DIR
-    / "data_network"
-    / "1_new_2005_2025"
-    / "network"
+    / "data"
+    / "data_2005_2025_network"
 )
 
 BACKBONE_FILE = (
@@ -34,8 +33,8 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 # LOAD DATA
 # --------------------------------------------------
 
-nodes = pd.read_csv(NETWORK_DIR / "network_deduplicated/nodes.csv")
-edges = pd.read_csv(NETWORK_DIR / "network_deduplicated/edges.csv")
+nodes = pd.read_csv(NETWORK_DIR / "nodes.csv")
+edges = pd.read_csv(NETWORK_DIR / "edges.csv")
 backbone_edges = pd.read_csv(BACKBONE_FILE)
 
 print("Loaded files:")
