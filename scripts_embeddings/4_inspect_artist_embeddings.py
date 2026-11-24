@@ -9,14 +9,15 @@ import pandas as pd
 # CONFIGURATION
 # --------------------------------------------------
 
-BASE_DIR = Path("data_lyrics")
+PROJECT_DIR = Path(__file__).resolve().parents[1]
+BASE_DIR = PROJECT_DIR / "data" / "data_2005_2025_artist_embeddings"
 
 EMBEDDINGS_PATH = BASE_DIR / "embeddings/v2/artist_embeddings.npy"
 METADATA_PATH = BASE_DIR / "embeddings/v2/artist_metadata.csv"
 
 COMMUNITIES_PATH = (
-    Path("data_network/1_new_2005_2025/network")
-    / "network_deduplicated/louvain_communities.csv"
+    PROJECT_DIR / "data" / "data_2005_2025_network"
+    / "network" / "louvain_communities.csv"
 )
 
 OUTPUT_DIR = BASE_DIR / "semantic_analysis/embedding_inspection"

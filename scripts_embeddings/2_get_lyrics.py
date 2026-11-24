@@ -14,12 +14,13 @@ import requests
 # ==================================================
 
 PROJECT_DIR = Path(__file__).resolve().parents[1]
+DATA_DIR = PROJECT_DIR / "data" / "data_2005_2025_artist_embeddings"
 
-INPUT_FILE = PROJECT_DIR / "data_lyrics" / "hentet_recordings_2" / "top_recordings.csv"
+INPUT_FILE = DATA_DIR / "hentet_recordings_2" / "top_recordings.csv"
 
-OUTPUT_FILE = PROJECT_DIR / "data_lyrics" / "hentet_lyrics_2" / "lyrics.csv"
-NOT_FOUND_FILE = PROJECT_DIR / "data_lyrics" / "hentet_lyrics_2" / "not_found_lyrics.csv"
-INSTRUMENTAL_FILE = PROJECT_DIR / "data_lyrics" / "hentet_lyrics_2" / "instrumental_songs.csv"
+OUTPUT_FILE = DATA_DIR / "hentet_lyrics_2" / "lyrics.csv"
+NOT_FOUND_FILE = DATA_DIR / "hentet_lyrics_2" / "not_found_lyrics.csv"
+INSTRUMENTAL_FILE = DATA_DIR / "hentet_lyrics_2" / "instrumental_songs.csv"
 
 BASE_URL = "https://lrclib.net/api"
 

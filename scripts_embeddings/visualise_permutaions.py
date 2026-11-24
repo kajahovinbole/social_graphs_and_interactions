@@ -8,7 +8,10 @@ import matplotlib.pyplot as plt
 
 PROJECT_DIR = Path(__file__).resolve().parents[1]
 
-BASE_DIR = PROJECT_DIR / "data_lyrics/semantic_analysis_2"
+BASE_DIR = (
+    PROJECT_DIR / "data" / "data_2005_2025_artist_embeddings"
+    / "semantic_analysis_2"
+)
 
 NULL_PATH = BASE_DIR / "permutation_null_distribution.npy"
 RESULTS_PATH = BASE_DIR / "semantic_similarity_results.csv"

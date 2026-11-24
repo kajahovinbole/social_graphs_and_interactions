@@ -21,11 +21,14 @@ PROJECT_DIR = Path(__file__).resolve().parents[1]
 ARTISTS_FILE = (
     PROJECT_DIR
     / "data"
-    / "build_network"
+    / "data_2005_2025_network"
     / "artists.csv"
 )
 
-OUTPUT_DIR = Path("data_lyrics/hentet_recordings_2")
+OUTPUT_DIR = (
+    PROJECT_DIR / "data" / "data_2005_2025_artist_embeddings"
+    / "hentet_recordings_2"
+)
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 OUTPUT_FILE = OUTPUT_DIR / "top_recordings.csv"

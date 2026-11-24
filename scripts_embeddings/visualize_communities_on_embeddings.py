@@ -11,21 +11,19 @@ import umap
 # Configuration
 # --------------------------------------------------
 
-EMBEDDINGS_PATH = Path(
-    "data_lyrics/embeddings/v2/artist_embeddings.npy"
+PROJECT_DIR = Path(__file__).resolve().parents[1]
+DATA_DIR = PROJECT_DIR / "data" / "data_2005_2025_artist_embeddings"
+
+EMBEDDINGS_PATH = DATA_DIR / "embeddings" / "v2" / "artist_embeddings.npy"
+
+ARTIST_METADATA_PATH = DATA_DIR / "embeddings" / "v2" / "artist_metadata.csv"
+
+NETWORK_METADATA_PATH = (
+    PROJECT_DIR / "data" / "data_2005_2025_network"
+    / "network" / "louvain_communities.csv"
 )
 
-ARTIST_METADATA_PATH = Path(
-    "data_lyrics/embeddings/v2/artist_metadata.csv"
-)
-
-NETWORK_METADATA_PATH = Path(
-    "data_network/1_new_2005_2025/network/network_deduplicated/louvain_communities.csv"
-)
-
-OUTPUT_DIR = Path(
-    "data_lyrics/visualizations/embeddings_v2"
-)
+OUTPUT_DIR = DATA_DIR / "visualizations" / "embeddings_v2"
 
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 

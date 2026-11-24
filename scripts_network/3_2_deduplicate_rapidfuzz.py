@@ -8,7 +8,8 @@ from pathlib import Path
 # Configuration
 # --------------------------------------------------
 
-BASE_DIR = Path("data/data_2005_2025_network/deduplication")
+PROJECT_DIR = Path(__file__).resolve().parents[1]
+BASE_DIR = PROJECT_DIR / "data" / "data_2005_2025_network" / "deduplication"
 
 INPUT_FILE = BASE_DIR / "unique_songs.csv"
 REVIEW_FILE = BASE_DIR / "potential_duplicates_review.csv"

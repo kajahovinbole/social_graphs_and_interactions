@@ -9,11 +9,12 @@ PROJECT_DIR = Path(__file__).resolve().parents[1]
 
 INPUT_PATH = (
     PROJECT_DIR
-    / "data_lyrics/semantic_analysis_2/pairwise_similarities.csv"
+    / "data/data_2005_2025_artist_embeddings/semantic_analysis_2/pairwise_similarities.csv"
 )
 
 OUTPUT_DIR = (
-    PROJECT_DIR / "data_lyrics/semantic_analysis_2/figures"
+    PROJECT_DIR
+    / "data/data_2005_2025_artist_embeddings/semantic_analysis_2/figures"
 )
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 

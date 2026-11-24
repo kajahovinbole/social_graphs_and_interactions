@@ -9,8 +9,10 @@ from tqdm import tqdm
 # Configuration
 # --------------------------------------------------
 
-INPUT_FILE = Path("data_lyrics/hentet_lyrics_2/lyrics.csv")
-OUTPUT_DIR = Path("data_lyrics/embeddings/v2/")
+PROJECT_DIR = Path(__file__).resolve().parents[1]
+DATA_DIR = PROJECT_DIR / "data" / "data_2005_2025_artist_embeddings"
+INPUT_FILE = DATA_DIR / "hentet_lyrics_2" / "lyrics.csv"
+OUTPUT_DIR = DATA_DIR / "embeddings" / "v2"
 
 MODEL_NAME = "sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
 

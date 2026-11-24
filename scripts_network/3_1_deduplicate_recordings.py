@@ -8,13 +8,9 @@ from pathlib import Path
 # Configuration
 # --------------------------------------------------
 
-INPUT_FILE = Path(
-    "data/data_2005_2025_network/recordings.csv"
-)
-
-OUTPUT_DIR = Path(
-    "data/data_2005_2025_network/deduplication"
-)
+PROJECT_DIR = Path(__file__).resolve().parents[1]
+OUTPUT_DIR = PROJECT_DIR / "data" / "data_2005_2025_network" / "deduplication"
+INPUT_FILE = OUTPUT_DIR / "recordings_for_dedup.csv"
 
 OUTPUT_FILE = OUTPUT_DIR / "unique_songs.csv"
 MAPPING_FILE = OUTPUT_DIR / "recording_deduplication_mapping.csv"

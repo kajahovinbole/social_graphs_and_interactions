@@ -13,6 +13,7 @@ DATA_DIR = (
     PROJECT_DIR
     / "data"
     / "data_2005_2025_network"
+    / "network"
 )
 
 NODES_FILE = DATA_DIR / "nodes.csv"

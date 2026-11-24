@@ -16,22 +16,21 @@ PROJECT_DIR = Path(__file__).resolve().parents[1]
 
 EMBEDDINGS_PATH = (
     PROJECT_DIR
-    / "data_lyrics/embeddings/v2/artist_embeddings.npy"
+    / "data/data_2005_2025_artist_embeddings/embeddings/v2/artist_embeddings.npy"
 )
 
 ARTIST_METADATA_PATH = (
     PROJECT_DIR
-    / "data_lyrics/embeddings/v2/artist_metadata.csv"
+    / "data/data_2005_2025_artist_embeddings/embeddings/v2/artist_metadata.csv"
 )
 
 NETWORK_METADATA_PATH = (
     PROJECT_DIR
-    / "data_network/1_new_2005_2025/network/"
-    "network_deduplicated/louvain_communities.csv"
+    / "data/data_2005_2025_network/network/louvain_communities.csv"
 )
 
 OUTPUT_DIR = (
-    PROJECT_DIR / "data_lyrics/semantic_analysis_2"
+    PROJECT_DIR / "data/data_2005_2025_artist_embeddings/semantic_analysis_2"
 )
 
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)

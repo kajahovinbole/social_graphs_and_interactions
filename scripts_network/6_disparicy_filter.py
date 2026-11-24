@@ -1,6 +1,5 @@
 
 from pathlib import Path
-import numpy as np
 import pandas as pd
 
 
@@ -11,12 +10,12 @@ DATA_DIR = (
     PROJECT_DIR
     / "data"
     / "data_2005_2025_network"
+    / "network"
 )
 
 EDGES_FILE = DATA_DIR / "edges.csv"
 
 OUTPUT_DIR = DATA_DIR / "backbone"
-OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # Significance thresholds to investigate
 THRESHOLDS = [0.01, 0.05, 0.10, 0.15, 0.20, 0.30, 0.40, 0.42, 0.44, 0.46, 0.48, 0.50, 0.60]
@@ -70,6 +69,8 @@ def calculate_disparity_filter(edges):
 
 
 def main():
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
     edges = pd.read_csv(EDGES_FILE)
 
     print(f"Original edges: {len(edges)}")

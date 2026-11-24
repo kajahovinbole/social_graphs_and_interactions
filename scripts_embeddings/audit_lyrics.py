@@ -11,9 +11,11 @@ import pandas as pd
 # CONFIGURATION
 # --------------------------------------------------
 
-INPUT_FILE = Path("data_lyrics/lyrics.csv")
+PROJECT_DIR = Path(__file__).resolve().parents[1]
+DATA_DIR = PROJECT_DIR / "data" / "data_2005_2025_artist_embeddings"
+INPUT_FILE = DATA_DIR / "hentet_lyrics_2" / "lyrics.csv"
 
-OUTPUT_DIR = Path("data_lyrics/quality_audit")
+OUTPUT_DIR = DATA_DIR / "quality_audit"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 N_RANDOM_SAMPLES = 20

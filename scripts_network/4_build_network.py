@@ -21,7 +21,7 @@ DATASET_DIR = PROJECT_DIR / "data" / "data_2005_2025_network"
 
 ARTISTS_FILE = DATASET_DIR / "artists.csv"
 SONGS_FILE = DATASET_DIR / "deduplication" / "unique_songs_reviewed.csv"
-OUTPUT_DIR = DATASET_DIR
+OUTPUT_DIR = DATASET_DIR / "network"
 
 
 # --------------------------------------------------

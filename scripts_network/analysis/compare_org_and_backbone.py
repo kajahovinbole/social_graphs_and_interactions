@@ -3,12 +3,13 @@ from pathlib import Path
 import pandas as pd
 import networkx as nx
 
-PROJECT_DIR = Path(__file__).resolve().parents[1]
+PROJECT_DIR = Path(__file__).resolve().parents[2]
 
 DATA_DIR = (
     PROJECT_DIR
     / "data"
     / "data_2005_2025_network"
+    / "network"
 )
 
 NODES_FILE = DATA_DIR / "nodes.csv"
@@ -51,10 +52,10 @@ def analyze_network(nodes_file, edges_file, name):
     return G
 
 
-original = analyze_network(
-    NODES_FILE, ORIGINAL_EDGES, "ORIGINAL NETWORK"
-)
+def main():
+    analyze_network(NODES_FILE, ORIGINAL_EDGES, "ORIGINAL NETWORK")
+    analyze_network(NODES_FILE, BACKBONE_EDGES, "BACKBONE (alpha = 0.42)")
 
-backbone = analyze_network(
-    NODES_FILE, BACKBONE_EDGES, "BACKBONE (alpha = 0.42)"
-)
+
+if __name__ == "__main__":
+    main()

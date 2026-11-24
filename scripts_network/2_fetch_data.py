@@ -5,6 +5,7 @@ import time
 import json
 import hashlib
 import requests
+from pathlib import Path
 
 from datetime import datetime, timezone
 from collections import defaultdict
@@ -17,13 +18,15 @@ from collections import defaultdict
 
 # Dataset
 DATASET_NAME = "data_2005_2025_network"
+PROJECT_DIR = Path(__file__).resolve().parents[1]
+DATASET_DIR = PROJECT_DIR / "data" / DATASET_NAME
 
 START_YEAR = 2005
 END_YEAR = 2025
 
 # Input / output
-INPUT_FILE = f"data/{DATASET_NAME}/pop_artists.csv"
-OUTPUT_DIR = f"data/{DATASET_NAME}"
+INPUT_FILE = str(DATASET_DIR / "pop_artists.csv")
+OUTPUT_DIR = str(DATASET_DIR)
 
 # Recording filters
 EXCLUDE_ALT_VERSIONS = True
