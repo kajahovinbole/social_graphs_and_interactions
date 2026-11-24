@@ -324,7 +324,7 @@ def save_raw_recordings(all_recordings):
 # ============================================================
 
 def build_network(selected_artists, collaborations):
-    """Build weighted collaboration network and save CSV files."""
+    """Save selected artists and collaboration recordings, with a summary."""
 
     edge_weights = defaultdict(int)
 
@@ -356,24 +356,6 @@ def build_network(selected_artists, collaborations):
         for artist_id, name in sorted(selected_artists.items()):
 
             writer.writerow([artist_id, name])
-
-    # --------------------------------------------------------
-    # Save weighted edges
-    # --------------------------------------------------------
-
-    # These are pre-deduplication edges. Keep them distinct from the final
-    # network edges created from manually reviewed unique songs in step 4.
-    edges_path = os.path.join(OUTPUT_DIR, "recording_level_edges.csv")
-
-    with open(edges_path, "w", newline="", encoding="utf-8") as f:
-
-        writer = csv.writer(f)
-
-        writer.writerow(["source", "target", "weight"])
-
-        for (source, target), weight in sorted(edge_weights.items()):
-
-            writer.writerow([source, target, weight])
 
     # --------------------------------------------------------
     # Save collaboration recordings
@@ -433,7 +415,6 @@ def build_network(selected_artists, collaborations):
 
     print("\nFiles saved:")
     print(f"  {artists_path}")
-    print(f"  {edges_path}")
     print(f"  {recordings_path}")
 
     return summary
