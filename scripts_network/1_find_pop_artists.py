@@ -12,13 +12,13 @@ from datetime import datetime, timezone
 # -----------------------------
 
 # Dataset
-DATASET_NAME = "data_2005_2025"
+DATASET_NAME = "data_2005_2025_network"
 START_YEAR = 2005
 END_YEAR = 2025
 
 # MusicBrainz search
 GENRE_TAG = "pop"
-MIN_RECORDINGS = 3
+MIN_RECORDINGS = 6
 
 # API settings
 PAGE_SIZE = 100
@@ -28,7 +28,7 @@ MAX_RETRIES = 6
 TIMEOUT = 30
 
 # Output
-OUTPUT_DIR = f"data_network/min_3_recordings/{DATASET_NAME}"
+OUTPUT_DIR = f"data/{DATASET_NAME}"
 OUTPUT_FILE = f"{OUTPUT_DIR}/pop_artists.csv"
 
 # API
@@ -223,7 +223,7 @@ def save_metadata():
         "retrieved_at": datetime.now(timezone.utc).isoformat()
     }
 
-    metadata_file = os.path.join(OUTPUT_DIR, "metadata.json")
+    metadata_file = os.path.join(OUTPUT_DIR, "pop_artists_metadata.json")
 
     with open(metadata_file, "w", encoding="utf-8") as f:
         json.dump(metadata, f, indent=4)

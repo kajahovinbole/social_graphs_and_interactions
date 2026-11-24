@@ -8,13 +8,13 @@ from pathlib import Path
 # Configuration
 # --------------------------------------------------
 
-BASE_DIR = Path("data_network/1_new_2005_2025")
+BASE_DIR = Path("data/data_2005_2025_network/deduplication")
 
-INPUT_FILE = BASE_DIR / "unique_songs_3_2.csv"
+INPUT_FILE = BASE_DIR / "unique_songs.csv"
 REVIEW_FILE = BASE_DIR / "potential_duplicates_review.csv"
 
-OUTPUT_FILE = BASE_DIR / "unique_songs_reviewed_3_3.csv"
-MAPPING_FILE = BASE_DIR / "reviewed_song_mapping_3_3.csv"
+OUTPUT_FILE = BASE_DIR / "unique_songs_reviewed.csv"
+MAPPING_FILE = BASE_DIR / "reviewed_song_mapping.csv"
 
 THRESHOLD = 60
 

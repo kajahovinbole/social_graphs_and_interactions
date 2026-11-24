@@ -1,0 +1,614 @@
+original_song_id,final_song_id,original_title,artists
+1,1,My Oh My,Kylie Minogue; Bebe Rexha
+2,2,Bleib,Pietro Lombardi; Sarah Engels
+3,3,C’est comme ça,Jérémy Frerot; Claudio Capéo
+4,4,Up,Olly Murs; Demi Lovato
+5,5,3 Words,Cheryl; will.i.am
+6,6,Pure Pop Party: Higher / S & M / On the Floor / Party Rock Anthem / Who’s That Chick? / Good Girl / The Time (dirty Bit),Kylie Minogue; David Guetta; Jennifer Lopez
+7,7,Unholy,Kim Petras; Sam Smith
+8,8,Say My Name,David Guetta; Bebe Rexha
+9,9,Fremde oder Freunde,Gregor Meyle; Howard Carpendale
+10,10,Let Somebody Go (piano version),Coldplay; Selena Gomez
+11,11,Met Him Last Night,Ariana Grande; Demi Lovato
+12,12,My Man Is a Mean Man,Gregor Meyle; Stefanie Heinzmann
+13,13,Send It On,Jonas Brothers; Selena Gomez; Demi Lovato
+14,14,Snow on the Beach,Taylor Swift; Lana Del Rey
+15,15,Until the End of Time,Justin Timberlake; Beyoncé
+16,16,Better Place (Family Harmony),Camila Cabello; Justin Timberlake
+17,17,Ocean Eyes,Lana Del Rey; Billie Eilish
+18,18,Un endroit pour vivre,Jérémy Frerot; Vianney
+19,19,Run (Taylor’s version) (from The Vault),Taylor Swift; Ed Sheeran
+20,20,What a Wonderful World (One World: Together at Home),Camila Cabello; Shawn Mendes
+21,21,Me Against the Music,Britney Spears; Madonna
+22,22,Casanova,Justin Timberlake; Esmée Denters
+23,23,Heartbreak Anthem,David Guetta; Little Mix
+24,24,South of the Border,Camila Cabello; Ed Sheeran
+25,25,"Baby, I’m Jealous",Doja Cat; Bebe Rexha
+26,26,Beautiful Liar,Beyoncé; Shakira
+27,27,Dieser Weg,Xavier Naidoo; Pur
+28,28,The Happening,Glee Cast; Demi Lovato
+29,29,Girlfriend inst,Crystal Kay; BoA
+30,30,レイン・オン・ミー- ミュージック・ビデオ・メイキング,Lady Gaga; Ariana Grande
+31,31,I’m Good (Blue) / Can’t Hold Us,David Guetta; Bebe Rexha
+32,32,I Don’t Care,Ed Sheeran; Justin Bieber
+33,33,We Own the Night,Selena Gomez & the Scene; Pixie Lott
+34,34,On Repeat,Robin Schulz; David Guetta
+35,35,Zusammen,Clueso; Elif
+36,36,Les danses du cinéma,Zazie; Alizée
+37,37,Demain de bon matin,Boulevard des Airs; Zaz
+38,38,At the Movies: Pop Party: Hollaback Girl / Lady Marmalade / Can’t Stop the Feeling! (Film version) / Move Your Feet / Dance / It’ s a Sunshine Day / When I Grow Up,The Pussycat Dolls; Justin Timberlake; P!nk
+39,39,4 Minutes,Justin Timberlake; Madonna
+40,40,I'm Good in a Truck Bed (Prepmode mix) (clean),David Guetta; Bebe Rexha
+41,41,Check,Dua Lipa; Ariana Grande
+42,42,Diese Welt braucht Liebe,Stefanie Heinzmann; Nico Suave; Ben Zucker; Yvonne Catterfeld
+43,43,Until I Found You,Stephen Sanchez; Lana Del Rey
+44,44,Santa Baby,Helene Fischer; Robbie Williams
+45,45,Ein Stern (… der deinen Namen trägt),Nik P.; DJ Ötzi
+46,46,"Bad, Bad Leroy Brown",Xavier Naidoo; Sasha; Yvonne Catterfeld
+47,47,Taste / Omen (mixed),Sabrina Carpenter; Sam Smith
+48,48,Palomino Rich Man,Staplin; April March
+49,49,Chez toi,Slimane; Claudio Capéo
+50,50,Everywhere (BBC Children in Need),Niall Horan; Anne‐Marie
+51,51,Hips Don’t Lie (Spotify Anniversary version),Ed Sheeran; Shakira
+52,52,Make a Wave,Joe Jonas; Demi Lovato
+53,53,Unlock It,Charli xcx; Kim Petras
+54,54,Stay With Me,Halsey; Justin Timberlake
+55,55,YOU & I,Khalid; Anne‐Marie
+56,56,Dream Team,Pietro Lombardi; Sarah Engels
+57,57,Drei Uhr nachts (Piano version),LEA; Mark Forster
+58,58,Pepsi Super Bowl Halftime Show,Shakira; Jennifer Lopez
+59,59,I’ll Keep Loving You vs. Yesterday,David Guetta; Bebe Rexha
+60,60,3AM (Pull Up),Charli xcx; MØ
+61,61,Fairytale of New York,Leslie Clio; Rea Garvey
+62,62,Hope,Gregor Meyle; Michael Patrick Kelly
+63,63,Calamar Club,Zazie; Alizée
+64,64,Geboren um dich zu lieben (Bassflow remake),Nik P.; DJ Ötzi
+65,65,WON’T BE LONG,倖田來未; EXILE
+66,66,The Golden Years: 1988: Need You Tonight / You Came / Boys (Summertime Love) / Tell It to My Heart / Thme from S’Express / She Wants to Dance With Me / The Only Way is Up / I Owe You Nothing / Heart / A Little Respect,Pet Shop Boys; Bros
+67,67,Les Paradis perdus,Zazie; Zaz
+68,45,Einen Stern (Der deinen Namen trägt),Nik P.; DJ Ötzi
+69,69,Ich will noch nicht nach Hause,Johannes Oerding; Michael Patrick Kelly
+70,70,I'm Good (Blue) (2023 Billboard Music Awards),David Guetta; Bebe Rexha
+71,70,I’m Good (Blue),David Guetta; Bebe Rexha
+72,72,Beautiful People,Khalid; Ed Sheeran
+73,73,How Deep Is Your Love,Take That; Barry Gibb
+74,74,VULGAR,Sam Smith; Madonna
+75,75,Sympathy is a knife,Charli xcx; Ariana Grande
+76,76,Telephone (Cha Cha 31),Lady Gaga; Beyoncé
+77,77,Friendzone,Lukas Rieger; DieLochis
+78,78,Ton rayon vert,Staplin; April March
+79,79,One in a Million,David Guetta; Bebe Rexha
+80,80,This Is Me,Joe Jonas; Demi Lovato
+81,81,Unholy (orchestral version),Kim Petras; Sam Smith
+82,82,Pop Party: 2010–2013: Don’t Stop the Party / Where Them Girls At / Give Me Everything / Won’t Go Quietly / Rock That Body / Sweat / Bounce / Changed the Way You Kiss Me / OMG / Moves Like Jagger / Party Rock Anthem / Yeah 3x,Maroon 5; David Guetta
+83,83,Die guten Zeiten,Johannes Oerding; Wincent Weiss
+84,84,evolution 〜for beloved one〜（女性 Only Vocal Version）,桃井はるこ; fripSide
+85,85,Guess / JOYRIDE (mixed),Charli xcx; Kesha
+86,86,lovely,Khalid; Billie Eilish
+87,87,Encore et encore,Slimane; Claudio Capéo
+88,88,Die Sehnsucht ist mein Steuermann,Ben Zucker; Wincent Weiss; Santiano
+89,89,Sex Mix – A Sample Fuelled Mix featuring: Sexual Healing / Sexy Love / I Want Your Sex / Let’s Talk About Sex / Erotica / I Wanna Sex You Up / Sex / You Sexy Thing / Get Up I Feel Like Being a Sex Machine / Slave 4 U / Sexomatic / Do You Think I’m Sexy / Let’s Talk About Sex) (Shhh) / Sexy Back / Sex Shooter / Sexcrime (Nineteen Eighty‐Four) / I’m Too Sexy / Sexbomb,Britney Spears; Justin Timberlake; Madonna
+90,90,Scream & Shout,Britney Spears; will.i.am
+91,91,C'est dur,Miel de Montagne; Katerine
+92,92,Try Me,Jason Derulo; Jennifer Lopez
+93,93,Freiheit,Xavier Naidoo; Pur
+94,94,Je me dis que toi aussi,Boulevard des Airs; Jérémy Frerot
+95,95,"Get Wild, Elevator Man",Staplin; April March
+96,96,Perfekt,Pietro Lombardi; Sarah Engels
+97,97,Atemlos durch die Nacht,Helene Fischer; Gregor Meyle
+98,98,Danke,Nico Suave; Xavier Naidoo
+99,99,L' horizon,Staplin; April March
+100,100,One and the Same,Selena Gomez; Demi Lovato
+101,101,Coming Home,Jason Derulo; Pixie Lott
+102,102,FANTASTIC JOURNEY,Crystal Kay; DAISHI DANCE
+103,103,Night Fever,MILEY; Demi Lovato
+104,104,"So weit, so gut",Gregor Meyle; Xavier Naidoo
+105,105,#thatPOWER,will.i.am; Justin Bieber
+106,106,Karma / Used to Know Me,Taylor Swift; Charli xcx
+107,107,Yells ～It's a beautiful life～ (女性 Only Vocal Version),savage genius; 桃井はるこ
+108,108,Give It to Me,Nelly Furtado; Justin Timberlake
+109,109,"Paris, Texas",SYML; Lana Del Rey
+110,110,360 / Plastic Doll (mixed),Charli xcx; Lady Gaga
+111,111,unholyfoodTF__108.5bpm.m4a,Kim Petras; Sam Smith
+112,112,Don’t Dream It’s Over,MILEY; Ariana Grande
+113,113,Ein Zeichen,Alex Diehl; Laith Al-Deen
+114,114,Farben leuchten schwarz,Clueso; Mark Forster
+115,115,Cooldown Pop: Hey Boy / Best Friend / Vibez / Love Not War,Doja Cat; Jason Derulo
+116,116,L’Hymne de nos campagnes 2019,Vianney; Claudio Capéo; Zaz
+117,117,It Takes Two,Camila Cabello; Justin Timberlake
+118,118,I Don’t Wanna Wait,David Guetta; OneRepublic
+119,119,Okay,Pietro Lombardi; Sarah Engels
+120,120,The Feeling,Halsey; Justin Bieber
+121,121,Per il resto tutto bene,Helene Fischer; Eros Ramazzotti
+122,122,Ich will immer wieder... dieses Fieber spür'n,Helene Fischer; Gregor Meyle
+123,123,Dance With Me,Doja Cat; Dua Lipa
+124,124,Der Fels,Xavier Naidoo; Andrea Berg
+125,125,Heart Attack vs. I Knew You Were Trouble (Mashup),Taylor Swift; Demi Lovato
+126,126,Nimmerland,Pietro Lombardi; Sarah Engels
+127,127,Click,Charli xcx; Kim Petras
+128,128,"Good Luck, Babe! / Girl, so confusing (mixed)",Charli xcx; Chappell Roan
+129,129,Love Never Felt So Good,Justin Timberlake; Michael Jackson
+130,130,Sunday Morning With the Sensational Nightingales (poem),Paul Simon; Phil Collins
+131,131,Stolen Car,Mylène Farmer; Sting
+132,132,Fête à l’anglaise,Zazie; Alizée; Zaz
+133,133,4 Minutes (Peter Saves New York),Justin Timberlake; Madonna
+134,134,"Der deutsche Hitmix 2013, Block A: Sie liebt ihn immer noch / Das kann kein Zufall sein / Was immer du tust / Lass uns noch einmal lügen",Michael Wendler; Andrea Berg
+135,135,Ist Es Möglich,Wolfgang Niedecken; Xavier Naidoo
+136,136,Damn Girl,Justin Timberlake; will.i.am
+137,19,Run (Taylor’s version) (from the Vault) (lyric video),Taylor Swift; Ed Sheeran
+138,138,Shed a Light,Robin Schulz; David Guetta
+139,139,Summer Hit Mix 2017 (continuous mix 2),Take That; Ellie Goulding; Niall Horan; Lady Gaga; Anne‐Marie; Demi Lovato
+140,140,Just Desserts,Charli xcx; MARINA
+141,141,Was für eine geile Zeit,Ben Zucker; DJ Ötzi
+142,142,Biste Mode,Gregor Meyle; MIA.
+143,143,Everything Has Changed (Taylor’s version),Taylor Swift; Ed Sheeran
+144,144,Fall Down,MILEY; will.i.am
+145,145,Plain Sailing,Rea Garvey; Stefanie Heinzmann
+146,146,Heaven,Cheryl; will.i.am
+147,54,Stay With Me (Part 2),Halsey; Justin Timberlake
+148,148,Life,Pixie Lott; DAISHI DANCE
+149,149,Freakin' Out,LINA; MIA.
+150,150,2U,David Guetta; Justin Bieber
+151,151,"Signed, Sealed, Delivered (I’m Yours)",Maroon 5; Sting; Beyoncé; Shakira; will.i.am
+152,152,The Joker and the Queen,Taylor Swift; Ed Sheeran
+153,153,Woo Hoo,Big Time Rush; Kesha
+154,154,Cry Baby,David Guetta; Anne‐Marie
+155,155,Lone Ranger,Staplin; April March
+156,156,Better Days,Stefanie Heinzmann; Max Giesinger
+157,157,Coming Your Way,Anne‐Marie; Becky G
+158,158,Pomme De Reinette Et Pomme D'Api,Jérémy Frerot; Carla Bruni
+159,159,Little Green Apples,Kelly Clarkson; Robbie Williams
+160,160,Every Chance We Get We Run,David Guetta; Tegan and Sara
+161,161,Up,Olly Murs; Helene Fischer
+162,162,The Prayer (One World: Together at Home),Lady Gaga; Céline Dion
+163,163,Craziest Things,Cheryl; will.i.am
+164,164,Whole Lot of Heart,Ingrid Michaelson; Tegan and Sara
+165,165,motive,Doja Cat; Ariana Grande
+166,166,The DJs Set: 70s Glam Party: Dance with the Devil / Get Down / Dancin’ on a Saturday Night / Stuck in the Middle with You / Can the Can / The Jean Genie,Gilbert O’Sullivan; Suzi Quatro
+167,167,Lieder der Freiheit (MTV Unplugged),Ben Zucker; Santiano
+168,168,Les fleurs invisibles,Staplin; April March
+169,169,From the Jump (duet version),James Arthur; Kelly Clarkson
+170,170,On the Line,Jonas Brothers; Demi Lovato
+171,171,Immortal,Sophie Ellis‐Bextor; Robbie Williams
+172,172,"Tableau ""Une nuit au musée""",Zazie; Alizée
+173,173,Feelin Myself,MILEY; will.i.am
+174,174,Revolver,David Guetta; Madonna
+175,175,"Der deutsche Hitmix 2016, Block A: Mein Herz schlägt Schlager / Unter dem Regenbogen / Wir leben laut / Sieben Leben",Beatrice Egli; Vanessa Mai
+176,176,Howling,Lucius; SYML
+177,177,What We Came Here For,Joe Jonas; Demi Lovato
+178,178,DON’T YOU WORRY,David Guetta; Shakira
+179,179,Can't Buy Me Love,Stefanie Heinzmann; Xavier Naidoo
+180,180,Dreaming,Sting; P!nk
+181,181,IDGAF vs. When Love Takes Over vs. The Creeps (DJs From Mars club Bootleg),David Guetta; Dua Lipa
+182,182,Forever Young,David Guetta; Ava Max
+183,183,The Life of a Showgirl (Dressing Room Rehearsal version),Sabrina Carpenter; Taylor Swift
+184,184,La Quête,Vianney; Claudio Capéo; Zazie
+185,185,Miss America,Ingrid Michaelson; Sara Bareilles
+186,186,Für immer,LEA; Max Giesinger
+187,187,Priceless,Maroon 5; LISA
+188,188,Nothing Really Matters,David Guetta; will.i.am
+189,189,"4 Minutes (Tracy Young's Mixshow Edit) (""Hard Candy"" Album Vinyl Disc #3)",Justin Timberlake; Madonna
+190,190,When We Were Young (The Logical Song),David Guetta; Kim Petras
+191,191,Lean on Me,Avril Lavigne; Fefe Dobson; Justin Bieber
+192,192,Seoul (서울시홍보송),SUPER JUNIOR; Girls’ Generation
+193,193,Matches,Backstreet Boys; Britney Spears
+194,194,DJ Play a Christmas Song,Cher; Kelly Clarkson
+195,195,World Turns Grey,Robin Schulz; Princess Chelsea
+196,196,Guess,Charli xcx; Billie Eilish
+197,197,Unsere Reise,Pietro Lombardi; Sarah Engels
+198,198,The Life of a Showgirl,Sabrina Carpenter; Taylor Swift
+199,199,Without You,Nina Nesbitt; John Newman
+200,200,Slow Lightning,Pietro Lombardi; Sarah Engels
+201,201,We'll Be Together,Annie Lennox; Sting
+202,202,Rockabye vs. Rhythm Is a Dancer vs. 2u (DJs From Mars club Bootleg),David Guetta; Justin Bieber; Anne‐Marie
+203,203,Blackout,Pietro Lombardi; Sarah Engels
+204,204,Essential R’n’b: I’m Into You / The Lazy Song / I Need a Dollar / Just Cant Get Enough / Run the World (Girls) / Hush Hush / Where Them Girls At / Give Me Everything,David Guetta; Beyoncé; Jennifer Lopez
+205,205,Kiss My (Uh‐Oh),Little Mix; Anne‐Marie
+206,143,Everything Has Changed,Taylor Swift; Ed Sheeran
+207,207,Belle,Slimane; GIMS
+208,208,As I Am,Khalid; Justin Bieber
+209,29,Girlfriend,Crystal Kay; BoA
+210,83,Die guten Zeiten (Akustik Version),Johannes Oerding; Wincent Weiss
+211,211,Chart Mix,Kelly Clarkson; Jessica Simpson
+212,212,Nessaja,Helene Fischer; Peter Maffay
+213,213,GORGEOUS,Katy Perry; Kim Petras
+214,214,Les filles d'aujourd'hui,Claudio Capéo; Carla Bruni
+215,215,Burning Down,Alex Warren; Joe Jonas
+216,216,Viens on s'aime,Vianney; Claudio Capéo; Zaz; Carla Bruni
+217,217,Hanging On,Pietro Lombardi; Sarah Engels
+218,218,Only Human X Can't Stop the Feeling! X 24K (Muka Mashup / clean),Justin Timberlake; Jonas Brothers
+219,219,us.,Taylor Swift; Gracie Abrams
+220,220,Hey Boy Hey Girl,Charli xcx; will.i.am
+221,167,Lieder der Freiheit (To France) (MTV Unplugged),Ben Zucker; Santiano
+222,222,Gedankenmillionäre,Johannes Oerding; Nico Suave
+223,223,Naughty Girl / Woman,Doja Cat; Beyoncé
+224,224,Bad to You,Dua Lipa; Ariana Grande
+225,225,All My Friends Are Here,Phil Collins; Barry Gibb
+226,226,Camp de gitans,Zazie; Carla Bruni
+227,227,We're The Pet Shop Boys (Ralphi Rosario Dub Mix),Pet Shop Boys; Robbie Williams
+228,107,Yells ～It's a beautiful life～,savage genius; 桃井はるこ
+229,229,Born Again,LISA; Doja Cat
+230,230,Tik Tok Bitch (Rework),David Guetta; Kesha
+231,90,Scream & Shout (Dirty),Britney Spears; will.i.am
+232,232,Ich fühl wie du,Helene Fischer; Peter Maffay
+233,233,Killah,Pietro Lombardi; Sarah Engels
+234,234,Allez reste,Boulevard des Airs; Vianney
+235,235,Ich fühl wie du,Wincent Weiss; Yvonne Catterfeld
+236,236,Love Dealer,Justin Timberlake; Esmée Denters
+237,118,I Don’t Wanna Wait (piano version),David Guetta; OneRepublic
+238,238,Loose Ends,Justin Timberlake; will.i.am
+239,239,T.H.E (The Hardest Ever),will.i.am; Jennifer Lopez
+240,70,I’m Good (Blue) (2023 version),David Guetta; Bebe Rexha
+241,84,evolution 〜for beloved one〜,桃井はるこ; fripSide
+242,242,End Game,Taylor Swift; Ed Sheeran
+243,243,Don’t Call Me Angel (Charlie’s Angels),MILEY; Lana Del Rey; Ariana Grande
+244,244,Boy Like You,Cheryl; will.i.am
+245,245,Leicht,Pietro Lombardi; Sarah Engels
+246,36,Medley « Les danses du cinéma »,Zazie; Alizée
+247,247,Wer hält die Welt,Xavier Naidoo; Pur
+248,248,Push Go,Justin Timberlake; Madonna
+249,249,This Is It,Pietro Lombardi; Sarah Engels
+250,250,Come Home,OneRepublic; Sara Bareilles
+251,251,Heartbreaker,Cheryl; will.i.am
+252,252,Keep Going Up,Nelly Furtado; Justin Timberlake
+253,253,She’s Madonna,Pet Shop Boys; Robbie Williams
+254,254,"Der deutsche Hitmix 2016, Block B: Geboren um dich zu lieben / Wovon träumst du / Wollte mich ändern / Mitten ins Herz",Michael Wendler; Nik P.
+255,255,Fuir le bonheur de peur qu’il ne se sauve,Jérémy Frerot; Claudio Capéo
+256,256,Weit übers Meer (David’s Song),Helene Fischer; Santiano
+257,257,One More,MØ; Elliphant
+258,258,Omen und Orakel,Xavier Naidoo; Yvonne Catterfeld
+259,259,Saturday/Sunday,David Guetta; Jason Derulo
+260,260,Verdamp lang her,Wolfgang Niedecken; Clueso
+261,261,Intimacy,Pietro Lombardi; Sarah Engels
+262,262,Dirty Sexy Money (BLVK JVCK ReVibe),Charli xcx; David Guetta
+263,263,Señorita,Camila Cabello; Shawn Mendes
+264,264,Bilder von Dir,Gregor Meyle; Laith Al-Deen
+265,265,Magic Photographs Bootimix (mixed by Kevin Sweeney),Little Mix; Ed Sheeran
+266,266,Bloody Mary / Hung Up,Lady Gaga; Madonna
+267,267,Fallschirm,Gregor Meyle; MIA.
+268,268,I Don’t Do Drugs,Doja Cat; Ariana Grande
+269,269,Pure Urban Love,Beyoncé; The Wanted
+270,270,"Der deutsche Weihnachtshitmix, Block H: Kommet, Ihr Hirten / Denk ich an Weihnacht (Morning Has Broken) / Stille Weihnacht, heilige Nacht / Ein leises Lied (The First Noel) / Wir wünschen euch frohe Weihnacht (We Wish You a Merry Christmas)",Die Flippers; Roland Kaiser
+271,271,La felicità - So nah wie noch nie,Pupo; Nockalm Quintett
+272,272,Charity Song,Olly Murs; Pixie Lott; Ed Sheeran; Robbie Williams
+273,273,Blue (Da Ba Dee) (Gabry Ponte Ice Pop mix) / I’m Good (Blue),David Guetta; Bebe Rexha
+274,274,Prisoner,Dua Lipa; MILEY
+275,275,Wenn gestern heute wär,Laith Al-Deen; Peter Maffay
+276,276,Dis quand reviendras‐tu ?,Zazie; Carla Bruni
+277,277,Le Firmament,Vianney; GIMS
+278,278,Monster,Shawn Mendes; Justin Bieber
+279,279,Wouldn’t Change a Thing,Joe Jonas; Demi Lovato
+280,280,Alles wird gut,Helene Fischer; Gregor Meyle
+281,281,No Love for the Lonely,Ed Sheeran; Ariana Grande
+282,282,Video Phone (original edit),Lady Gaga; Beyoncé
+283,283,Hit-Medley PUR,Helene Fischer; Pur
+284,284,Beautiful Liar (Spanglish Featuring Sasha A/K/A Beyoncé),Beyoncé; Shakira
+285,285,bitches,Charli xcx; Elliphant
+286,286,We’ll Be a Dream,We the Kings; Demi Lovato
+287,287,"Von Himmel hoch, da komm' ich her",Helene Fischer; Xavier Naidoo
+288,288,Lighter,David Guetta; 5 Seconds of Summer
+289,289,Bam Bam,Camila Cabello; Ed Sheeran
+290,290,Mobile Floorfillers,Katy Perry; David Guetta; P!nk
+291,291,Chart Hits: Good Girl / Every Little Part of Me / Eyes Wide Shut / S&M / Who’s That Chick?,David Guetta; Alesha Dixon
+292,292,Nimm meine Hand,Pietro Lombardi; Sarah Engels
+293,293,AMERICA HAS A PROBLEM / Fergalicious,Beyoncé; will.i.am
+294,190,When We Were Young (Logical Song),David Guetta; Kim Petras
+295,26,Beautiful Liar (Freemasons radio vox),Beyoncé; Shakira
+296,296,Blicke,LEA; Wincent Weiss
+297,297,Hoch im Norden (MTV Unplugged),Wincent Weiss; Santiano
+298,298,Mi verdad,Maná; Shakira
+299,299,Bounce,Jonas Brothers; Demi Lovato
+300,167,Lieder der Freiheit (To France),Ben Zucker; Santiano
+301,64,Geboren um dich zu lieben,Nik P.; DJ Ötzi
+302,302,The Edge of Glory / My Life Would Suck Without You,Lady Gaga; Kelly Clarkson
+303,303,Megamix,Helene Fischer; Andrea Berg
+304,10,Let Somebody Go,Coldplay; Selena Gomez
+305,305,Die Hölle morgen früh,Helene Fischer; Beatrice Egli
+306,306,Mädchen gegen Jungs (All‐Star‐Version),Lukas Rieger; Johannes Oerding; LEA; Roland Kaiser; DieLochis
+307,307,P.Y.T. (Pretty Young Thing) 2008,will.i.am; Michael Jackson
+308,308,She’s Madonna (Kris Menace vocal re‐interpretation),Pet Shop Boys; Robbie Williams
+309,309,Gotta Get Back My Baby,Sting; GIMS
+310,310,King of bongo,Pet Shop Boys; Robbie Williams
+311,108,Promiscuous / Give It to Me,Nelly Furtado; Justin Timberlake
+312,312,2U (Symphonic),David Guetta; Justin Bieber
+313,313,Mind Your Business,Britney Spears; will.i.am
+314,314,Call Me When You Break Up,Selena Gomez; Gracie Abrams
+315,315,Beep,The Pussycat Dolls; will.i.am
+316,316,Floatin’,Justin Timberlake; will.i.am
+317,317,Perfect Duet,Beyoncé; Ed Sheeran
+318,318,Swings Both Ways,Olly Murs; Robbie Williams
+319,319,Es lebe die Freundschaft!,Laith Al-Deen; Peter Maffay
+320,15,Until the End of Time (Ralphi Rosario Soul radio),Justin Timberlake; Beyoncé
+321,321,The Girl Is Mine 2008,will.i.am; Michael Jackson
+322,322,Yesterday,David Guetta; Bebe Rexha
+323,323,Wie früher mal dich,Helene Fischer; Mark Forster
+324,324,Baby Don’t Hurt Me,David Guetta; Anne‐Marie
+325,325,Eastside,Khalid; Halsey
+326,326,Regenbogen,Mark Forster; Lena
+327,327,Don’t Leave Me Alone,David Guetta; Anne‐Marie
+328,328,Not Alone (from the motion picture Devotion),Khalid; Joe Jonas
+329,329,3-Way (The Golden Rule),Justin Timberlake; Lady Gaga
+330,76,Blow / Telephone,Lady Gaga; Beyoncé
+331,331,I Wanna Go Crazy,David Guetta; will.i.am
+332,332,Block B,Michael Wendler; Andrea Berg
+333,333,Ein Stern,Nik P.; DJ Ötzi
+334,334,Ombres,Staplin; April March
+335,335,"Jung, verliebt und frei",Nik P.; Andrea Berg
+336,336,Made That Way,Pietro Lombardi; Sarah Engels
+337,337,Hit-Medley Howard Carpendale,Helene Fischer; Howard Carpendale
+338,338,Hallelujah,Helene Fischer; Rea Garvey
+339,339,Yesterday,Pietro Lombardi; Sarah Engels
+340,340,In meinem Ozean,Pietro Lombardi; Sarah Engels
+341,341,Medley: Schatten in die Haut tätowiert / Liebe wird verboten,Johannes Oerding; Peter Maffay
+342,342,Über sieben Brücken musst du gehn (MTV Unplugged),Johannes Oerding; Peter Maffay
+343,343,Demain,GIMS; Carla Bruni
+344,344,Wimpernschlag,Johannes Oerding; Max Giesinger
+345,345,Let it snow,Rea Garvey; Sasha
+346,346,I Wan’na Be Like You,Olly Murs; Robbie Williams
+347,321,The Girl is Mine 2008 96 Bpm,will.i.am; Michael Jackson
+348,348,If It’s Over,Charli xcx; MØ
+349,349,Lhuna,Kylie Minogue; Coldplay
+350,350,Lady Gaga vs. Madonna (The Mix): Poker Face / Just Dance / Jump / Hung Up / Born This Way / Give It 2 Me / Bad Romance / Celebration,Lady Gaga; Madonna
+351,351,Hold On,Glee Cast; Demi Lovato
+352,26,Beautiful Liar (Samba 51),Beyoncé; Shakira
+353,353,Check It Out! (special mix),Cheryl; will.i.am
+354,354,One More Don’t Night (mixed DJ Martin Pieters),Maroon 5; Ed Sheeran
+355,355,Baby Don't Hurt Me (Hypaton & Giuseppe Ottaviani radio),David Guetta; Anne‐Marie
+356,356,Roar,Glee Cast; Demi Lovato
+357,357,Let’s Get Down,Cheryl; will.i.am
+358,358,Unendlich,Vanessa Mai; Andrea Berg
+359,359,Guy B.,Staplin; April March
+360,360,Best Bad Friend,Rea Garvey; Michael Patrick Kelly
+361,361,Long Long Way to Go,Phil Collins; Sting
+362,26,Beautiful Liar (Maurice Joshua New main),Beyoncé; Shakira
+363,363,My Child,Rea Garvey; Xavier Naidoo
+364,364,This Is Our Song,Joe Jonas; Demi Lovato
+365,365,Family,Camila Cabello; Justin Timberlake
+366,366,Just Sing,Justin Timberlake; Kelly Clarkson
+367,367,In the End,Gregor Meyle; Stefanie Heinzmann
+368,368,Secret Love Song,Little Mix; Jason Derulo
+369,369,Hurts 2B Human,Khalid; P!nk
+370,370,Kids,Olly Murs; Robbie Williams
+371,371,"Santa, Can’t You Hear Me",Kelly Clarkson; Ariana Grande
+372,372,Femininomenon / 365 / Satisfaction (mixed),Charli xcx; Chappell Roan
+373,373,Königreich der Liebe,Stefanie Heinzmann; Peter Maffay
+374,374,Und es war Sommer,Johannes Oerding; Peter Maffay
+375,375,If You Really Love Me (How Will I Know),David Guetta; John Newman
+376,376,Hot & Cold,Katy Perry; Taylor Swift
+377,377,Teil von mir,Pietro Lombardi; Sarah Engels
+378,378,Hey Mama,David Guetta; Bebe Rexha
+379,251,Heartbraker,Cheryl; will.i.am
+380,380,3 Words (Steve Angello radio Re‐Production),Cheryl; will.i.am
+381,381,Hands,Halsey; Britney Spears; Jason Derulo; Selena Gomez; Jennifer Lopez; P!nk
+382,382,Purple Light,Doja Cat; Elliphant
+383,383,Backseat,Carly Rae Jepsen; Charli xcx
+384,384,Girls,Charli xcx; Bebe Rexha
+385,385,Stop Crying Your Heart Out,Kylie Minogue; Ava Max; Cher; Robbie Williams
+386,386,Shake It Off,Camila Cabello; Taylor Swift; Charli xcx
+387,387,To Be Young,Doja Cat; Anne‐Marie
+388,388,Wish You Were Here,Lukas Graham; Khalid
+389,389,Nur mit dir,Pietro Lombardi; Sarah Engels
+390,390,Alles an Dir,Gregor Meyle; Laith Al-Deen
+391,391,Before the Storm,Jonas Brothers; MILEY
+392,392,Heroes / Helden,Rea Garvey; Xavier Naidoo
+393,393,Lovely (Amapiano remake),Khalid; Billie Eilish
+394,394,Hey Mama vs. The Whisperer,David Guetta; Bebe Rexha
+395,395,Hast du jemals,Xavier Naidoo; Vanessa Mai
+396,396,Chart Breakers: Don’t Wanna Go Home / I Wanna Go / Glad You Came / She Makes Me Wanna,Britney Spears; Jason Derulo; The Wanted
+397,397,Birds and Bees,Ben Lee; Mandy Moore
+398,398,Walk This Way,Girls Aloud; Sugababes
+399,399,Hung Up on Gurls (Booty mix),Katy Perry; Madonna
+400,400,Promiscuous,Nelly Furtado; Justin Timberlake
+401,401,bad guy,Justin Bieber; Billie Eilish
+402,402,Gone Gone Gone,David Guetta; Tones and I
+403,118,I Don’t Wanna Wait (Band version),David Guetta; OneRepublic
+404,404,Porsche,Charli xcx; MØ
+405,405,Message in a Bottle,Sting; All Saints
+406,406,Video Games,Lana Del Rey; Billie Eilish
+407,407,Down,David Guetta; Jason Derulo
+408,63,"Tableau ""Calamar Club""",Zazie; Alizée
+409,409,Shake It Off,Taylor Swift; Charli xcx
+410,410,Yesterday vs. Lift Me Up,David Guetta; Bebe Rexha
+411,411,Chart Hits: Extended,David Guetta; will.i.am
+412,412,Just Sing (Trolls World Tour),Justin Timberlake; Kelly Clarkson
+413,413,No Money No Love,David Guetta; Elliphant
+414,414,Here Comes the Sun,Glee Cast; Demi Lovato
+415,415,SMS (Bangerz),Britney Spears; MILEY
+416,416,Shallow,Helene Fischer; Roland Kaiser
+417,417,I Need You,Pietro Lombardi; Sarah Engels
+418,418,Heartbreak Anthem (Misha K & Galantis Gold Rush VIP),David Guetta; Little Mix
+419,419,Heimweh,voXXclub; DJ Ötzi
+420,420,Alfie Solomon's Hush,Staplin; April March
+421,421,Hier mit dir (Akustik Version),Johannes Oerding; Wincent Weiss
+422,422,Follow My Lead,Justin Timberlake; Esmée Denters
+423,423,Rain on Me,Lady Gaga; Ariana Grande
+424,424,The Christmas Song,Camila Cabello; Shawn Mendes
+425,425,I Ain’t Worried (Latin version),OneRepublic; Becky G
+426,426,Baracuda,Nancy Wilson; P!nk
+427,427,Sternenträumer,DJ Ötzi; Andrea Berg
+428,428,Lovely (Hippie Sabotage Flip),Khalid; Billie Eilish
+429,429,Chillin in Paradise,Pietro Lombardi; Sarah Engels
+430,45,Ein Stern (... der deinen Namen trägt) (Balladen-Version),Nik P.; DJ Ötzi
+431,431,Un homme debout,Claudio Capéo; Ben Zucker
+432,432,We Rock,Jonas Brothers; Demi Lovato
+433,433,Bigger Than Love,Pietro Lombardi; Sarah Engels
+434,434,Comment on fait,Vianney; Zazie
+435,435,Mondsüchtig,Pietro Lombardi; Sarah Engels
+436,436,Rewrite the Stars,James Arthur; Anne‐Marie
+437,437,Pop Party,Shakira; Kesha
+438,64,Geboren um dich zu lieben (Xtreme Sound RMX),Nik P.; DJ Ötzi
+439,439,In the City,Charli xcx; Sam Smith
+440,440,Turn Up the Night,Pietro Lombardi; Sarah Engels
+441,441,Più che puoi,Eros Ramazzotti; Cher
+442,65,WON’T BE LONG (Making),倖田來未; EXILE
+443,55,YOU & I (Voicenote),Khalid; Anne‐Marie
+444,444,Falling Slowly,Helene Fischer; Gregor Meyle
+445,445,Beautiful,Carly Rae Jepsen; Justin Bieber
+446,446,Eiszeit,Johannes Oerding; Peter Maffay
+447,447,Chart Breakers: Run the World (Girls) / Last Friday Night (T.G.I.F.) / On the Floor / Judas / Rolling in the Deep vs. Hold It Against Me,Katy Perry; Britney Spears; Lady Gaga; Beyoncé; Jennifer Lopez
+448,448,"Freiheit, die ich meine",Johannes Oerding; Peter Maffay
+449,449,Don't Give up,Michael Patrick Kelly; Lena
+450,450,Ich will noch nicht nach Hause,Johannes Oerding; Michael Patrick Kelly; Wincent Weiss; Milow
+451,451,Night Is Young (a cappella) vs. Who’s That Chick (Fuck Me I’m Famous mix),Nelly Furtado; David Guetta
+452,452,Ça va ça va,Claudio Capéo; Ben Zucker
+453,453,Gebor'n,Nico Suave; Xavier Naidoo
+454,454,Crazy Kids,will.i.am; Kesha
+455,455,Stuck with U,Justin Bieber; Ariana Grande
+456,456,Bella ciao,Slimane; GIMS
+457,457,Make Up,Jason Derulo; Ava Max
+458,458,Ich bin wegen dir hier,Xavier Naidoo; Andrea Berg
+459,459,Sonne in der Nacht,Laith Al-Deen; Peter Maffay
+460,460,100th Digital Short,Justin Timberlake; Lady Gaga; Justin Bieber
+461,461,Je joue de la musique,Zazie; Zaz
+462,143,Everything Has Changed (Taylor’s version) (lyric video),Taylor Swift; Ed Sheeran
+463,463,It Should Be Easy,Britney Spears; will.i.am
+464,464,Block I,DJ Ötzi; Beatrice Egli; Andrea Berg
+465,465,Telephone (Tom Neville Ear Ringing inst.),Lady Gaga; Beyoncé
+466,466,Worried,Lukas Rieger; DieLochis
+467,26,Beautiful Liar (Freemasons club Vox),Beyoncé; Shakira
+468,468,ここにいたこと,AKB48; SKE48
+469,469,Im Februar,Johannes Oerding; Clueso
+470,470,Einmal Himmel und zurück,DJ Ötzi; Andrea Berg
+471,471,I Know What You Did Last Summer,Camila Cabello; Shawn Mendes
+472,57,Drei Uhr nachts,LEA; Mark Forster
+473,287,"Vom Himmel hoch, da komm’ ich her",Helene Fischer; Xavier Naidoo
+474,474,We've Got Tonight,Pietro Lombardi; Sarah Engels
+475,475,Lady Gaga vs. Madonna: Born This Way / Express Yourself,Lady Gaga; Madonna
+476,476,Bad Blood / Royals / Hold Up,Taylor Swift; Beyoncé
+477,477,On the Dancefloor,David Guetta; will.i.am
+478,478,"Never Say Never: Part 13, Overboard",MILEY; Justin Bieber
+479,479,I Dare You (Appelle ton amour),Kelly Clarkson; Zaz
+480,480,Cold Water,MØ; Justin Bieber
+481,481,Chart Hits: Crown / Ritual / Castles / Señorita / Sorry,Camila Cabello; Shawn Mendes
+482,482,"Vogue / yes, and? (mixed)",Madonna; Ariana Grande
+483,483,Reste,Sting; GIMS
+484,484,One In a Million (2023 Billboard Music Awards),David Guetta; Bebe Rexha
+485,485,2000-10-06: Top of the Pops: Kids,Kylie Minogue; Robbie Williams
+486,486,Mad Love,David Guetta; Becky G
+487,487,Jingle Bells,Rea Garvey; Sasha
+488,488,You’re My Favourite Song,Joe Jonas; Demi Lovato
+489,489,Hope (Hoffnung),Johannes Oerding; Michael Patrick Kelly
+490,490,Airbus,Pietro Lombardi; Sarah Engels
+491,256,Weit übers Meer,Helene Fischer; Santiano
+492,492,Spring breakers,Charli xcx; Kesha
+493,493,Casting,Jérémy Frerot; Vianney; Zaz
+494,494,Bitch I'm Madonna and Bad Blood (mashup),Taylor Swift; Madonna
+495,495,RE:BRIDGE〜Return to oneself〜,savage genius; 桃井はるこ
+496,496,Mad Again,David Guetta; Becky G
+497,497,Kids (XXV),Kylie Minogue; Robbie Williams
+498,498,Let It Be Me,David Guetta; Ava Max
+499,499,Oh My Love (Pride mix),Rea Garvey; Amy Macdonald
+500,500,Lay Down Snow White,Staplin; April March
+501,501,I’m Ready,Sam Smith; Demi Lovato
+502,502,BAIT,Kim Petras; BANKS
+503,88,Die Sehnsucht ist mein Steuermann (MTV Unplugged),Ben Zucker; Wincent Weiss; Santiano
+504,504,"Wouldn't Change a Thing (From ""Camp Rock 2: The Final Jam"")",Joe Jonas; Demi Lovato
+505,45,Ein Stern (der deinen Namen trägt) 2015,Nik P.; DJ Ötzi
+506,506,Mourir d'aimer,Slimane; Claudio Capéo
+507,507,Sorry,Justin Bieber; Ariana Grande
+508,342,Über Sieben Brücken Musst Du Gehen (MTV Unplugged),Johannes Oerding; Peter Maffay
+509,509,Geh davon aus,Gregor Meyle; Xavier Naidoo
+510,342,Über sieben Brücken musst du gehen,Johannes Oerding; Peter Maffay
+511,497,Kids,Kylie Minogue; Robbie Williams
+512,512,Friends & Family,LEA; Michael Patrick Kelly
+513,513,Schlüsselkind,Nico Suave; Sasha
+514,514,唇から愛をちょうだい,℃‐ute; 美勇伝
+515,515,All Good Things (Come to an End),Nelly Furtado; Rea Garvey
+516,516,Wavin’ Flag,David Guetta; will.i.am
+517,517,Pink & William Orbit Vs Madonna: Feel Good Time / Hollywood,Madonna; P!nk
+518,518,Beau Malheur,Jérémy Frerot; Vianney
+519,519,Family,David Guetta; Bebe Rexha
+520,520,Ti amo,Gregor Meyle; Howard Carpendale
+521,521,Together,Jason Derulo; Demi Lovato
+522,522,Verdamp lang her / Heroes,Clueso; Max Prosa
+523,523,Keep On Loving You,Pietro Lombardi; Sarah Engels
+524,524,The Winner Takes It All,Zazie; Zaz
+525,525,No Money No Love (Sir Art & Tony Sky mashup),David Guetta; Elliphant
+526,526,Mosaik,Beatrice Egli; Andrea Berg
+527,527,La Bombe humaine,Slimane; Jérémy Frerot; Vianney; Claudio Capéo
+528,528,Pussycat Dolls Triple Trackers,The Pussycat Dolls; will.i.am
+529,529,I LUV IT,Camila Cabello; Lana Del Rey
+530,530,友情 純情 oh 青春,℃‐ute; 美勇伝
+531,531,Tür an Tür mit Alice,Gregor Meyle; Howard Carpendale
+532,532,Einer muss den Job ja machen,Johannes Oerding; Wolfgang Niedecken
+533,65,WON’T BE LONG (Video Clip),倖田來未; EXILE
+534,534,Helden,Pietro Lombardi; Sarah Engels
+535,535,Starke Mädchen,Sarah Engels; Beatrice Egli
+536,536,Sternenträumer,Xavier Naidoo; Andrea Berg
+537,537,Big Fat Bass,Britney Spears; will.i.am
+538,538,Revolver (One Lover version),David Guetta; Madonna
+539,539,Es wird scho glei dumpa,Melissa Naschenweng; Roland Kaiser
+540,540,Winter Song,Ingrid Michaelson; Sara Bareilles
+541,541,Ins Blaue,Elif; Max Giesinger
+542,542,Qu’est-ce qu’on était beaux,Slimane; Claudio Capéo
+543,543,Was Wir Alleine Nicht Schaffen,Xavier Naidoo; Pur
+544,54,Stay With Me (Parts 1 & 2),Halsey; Justin Timberlake
+545,545,Overboard,MILEY; Justin Bieber
+546,546,Dich zu lieben,Roland Kaiser; Andrea Berg
+547,547,Powszechny I Śmiertelny,Justin Bieber; Ariana Grande
+548,548,The Unforgiven,Gregor Meyle; Stefanie Heinzmann
+549,549,Mein eignes Glück,Max Prosa; Felix Meyer
+550,550,Walk This Way (Behind the Scenes Footage),Girls Aloud; Sugababes
+551,551,Elektrizität,Stefanie Heinzmann; Peter Maffay
+552,552,Retro Mix: 1986–2011 (25 Years of Number Ones): Rock Me Amadeus / …Baby One More Time / Wannabe / You Got It (The Right Stuff) / Black or White / Vogue / Just Dance / Tragedy / Everything Changes / Can’t Get You Out of My Head / Push the Button / The Time (Dirty Bit) / Party Rock Anthem / Dreamer / No Limit,Take That; Kylie Minogue; Britney Spears; Lady Gaga; Madonna; Sugababes; Michael Jackson
+553,553,Comment ça tue,Boulevard des Airs; Claudio Capéo
+554,554,Unholy Drugs From Amsterdam (DJs From Mars Bootleg),Kim Petras; Sam Smith
+555,555,"One and the Same (From ""Princess Protection Program"")",Selena Gomez; Demi Lovato
+556,556,"Die guten Zeiten, die sind jetzt",Johannes Oerding; Wincent Weiss
+557,262,Dirty Sexy Money,Charli xcx; David Guetta
+558,558,Call On Me,Vianney; Ed Sheeran
+559,190,When We Were Young,David Guetta; Kim Petras
+560,560,I’ve Got A Life (David Guetta club),David Guetta; Annie Lennox
+561,561,the meaning of peace,倖田來未; BoA
+562,562,La Même,Vianney; GIMS
+563,563,Dear Darlin’,Olly Murs; Alizée
+564,564,Who We Love,Sam Smith; Ed Sheeran
+565,565,Freiheit,Helene Fischer; Ben Zucker
+566,566,Our Song,Niall Horan; Anne‐Marie
+567,567,Mond,Clueso; Elif
+568,568,Head on Fire,King Princess; MØ
+569,29,「Girlfriend」@ JCB Hall,Crystal Kay; BoA
+570,570,Die Young,Becky G; Kesha
+571,571,Diggin' in the Dirt,Johannes Oerding; Stefanie Heinzmann
+572,572,All in Your Name,Barry Gibb; Michael Jackson
+573,172,Une nuit au musée,Zazie; Alizée
+574,574,Hymn for the Weekend,Beyoncé; Coldplay
+575,575,RIIVERDANCE / Illusion / Replay (mixed),Lady Gaga; Dua Lipa; Beyoncé
+576,373,Königreich der Liebe (Geschichte),Stefanie Heinzmann; Peter Maffay
+577,297,Hoch im Norden,Wincent Weiss; Santiano
+578,578,Parti avec le soleil,Staplin; April March
+579,579,UNIVERSE,Crystal Kay; BoA
+580,580,Auld Lang Syne (charity medley),Ingrid Michaelson; Sara Bareilles
+581,581,Unser Tag,Helene Fischer; LINA
+582,582,So schön,Johannes Oerding; Peter Maffay
+583,583,Hasta la vista,Slimane; GIMS
+584,551,Elektrizität [Geschichte],Stefanie Heinzmann; Peter Maffay
+585,585,Problem,will.i.am; Becky G
+586,586,Tanz der Moleküle,Gregor Meyle; MIA.
+587,587,Villain's Whisper,Staplin; April March
+588,588,4 Minutes (feat. Justin Timberlake & Timbaland),Justin Timberlake; Madonna
+589,589,Every Breath You Take,Phil Collins; Sting
+590,590,Blah Blah Blah vs. Hung Up,Madonna; Kesha
+591,591,Mon frère,Slimane; Jérémy Frerot
+592,26,Beautiful Liar (Bello embustero),Beyoncé; Shakira
+593,593,L'Hymne de nos campagnes 2019,Boulevard des Airs; Vianney; Claudio Capéo; Zaz
+594,594,Passenger,Katy Perry; Britney Spears
+595,57,3 Uhr Nachts (Lucas Rogge Bootleg),LEA; Mark Forster
+596,596,Natalie,Staplin; April March
+597,597,II MOST WANTED,MILEY; Beyoncé
+598,598,I Miss You,Pietro Lombardi; Sarah Engels
+599,599,It's Christmas Time,Pietro Lombardi; Sarah Engels
+600,600,Du warst der geilste Fehler meines Lebens,Melissa Naschenweng; Nockalm Quintett
+601,601,Titanium / Apologize / Million Voices / Calling (Lose My Mind) / Countdown,David Guetta; OneRepublic
+602,602,Dont Wanna Go Home (Skillz mix) Vs. I Wanna Go (Mashup),Britney Spears; Jason Derulo
+603,603,Downboy,The Pussycat Dolls; Lady Gaga
+604,604,Essential Chart Mix,Kylie Minogue; Girls Aloud
+605,605,Youth,Khalid; Shawn Mendes
+606,606,Fields of Gold,Helene Fischer; Max Giesinger
+607,177,What We Caame Here For,Joe Jonas; Demi Lovato
+608,76,Telephone,Lady Gaga; Beyoncé
+609,609,Goodbye,David Guetta; Jason Derulo
+610,132,"Tableau ""Fête à l'anglaise""",Zazie; Alizée; Zaz
+611,611,25 Years of Number Ones: Pop: Gangstas Paradise / Hangin Tough / Whole Again / It Wasn’t Me / All That She Wants / Oops! …I Did It Again / Back to Life (However Do You Want Me) / Dub Be Good to Me / Crazy in Love / Return of the Mack / Boom! Shake the Room / Say Youll Be There / Were Going to Ibiza / Blood on the Dancefloor / The Power,Britney Spears; Beyoncé; Michael Jackson
+612,612,Underneath the Wind,Staplin; April March
+613,613,Ce gamin‐là,Boulevard des Airs; Vianney

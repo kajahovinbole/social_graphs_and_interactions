@@ -1,8 +1,10 @@
 
-/data*
+/data_*
 /.vscode
 
 /.venv 
 __pycache__
 
 .DS_Store
+
+.env

@@ -17,7 +17,7 @@ import pandas as pd
 
 PROJECT_DIR = Path(__file__).resolve().parents[1]
 
-ARTISTS_FILE = Path("data_network/1_new_2005_2025/build_network/artists.csv")   
+ARTISTS_FILE = PROJECT_DIR / "data" / "build_network" / "artists.csv"
 
 # Output from the manual duplicate-review workflow
 SONGS_FILE = Path("data_network/1_new_2005_2025/build_network/unique_songs_reviewed_3_3.csv")

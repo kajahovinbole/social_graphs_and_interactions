@@ -8,7 +8,7 @@ PROJECT_DIR = Path(__file__).resolve().parents[1]
 DATA_DIR = PROJECT_DIR / "data" / "data_2005_2025" / "deduplicated"
 BACKBONE_DIR = DATA_DIR / "backbone"
 
-ARTISTS_FILE = DATA_DIR / "artists.csv"
+ARTISTS_FILE = PROJECT_DIR / "data" / "build_network" / "artists.csv"
 
 artists = pd.read_csv(ARTISTS_FILE)
 artist_ids = artists["mbid"].astype(str).tolist()

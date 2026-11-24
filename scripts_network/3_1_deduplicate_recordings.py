@@ -9,11 +9,11 @@ from pathlib import Path
 # --------------------------------------------------
 
 INPUT_FILE = Path(
-    "data_network/data_2005_2025/deduplicated/recordings.csv"
+    "data/data_2005_2025_network/recordings.csv"
 )
 
 OUTPUT_DIR = Path(
-    "data_network/1_new_2005_2025"
+    "data/data_2005_2025_network/deduplication"
 )
 
 OUTPUT_FILE = OUTPUT_DIR / "unique_songs.csv"

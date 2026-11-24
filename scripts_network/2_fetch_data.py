@@ -16,14 +16,14 @@ from collections import defaultdict
 # ============================================================
 
 # Dataset
-DATASET_NAME = "data_2005_2025"
+DATASET_NAME = "data_2005_2025_network"
 
 START_YEAR = 2005
 END_YEAR = 2025
 
 # Input / output
-INPUT_FILE = f"project/data/{DATASET_NAME}/pop_artists.csv"
-OUTPUT_DIR = f"project/data/{DATASET_NAME}"
+INPUT_FILE = f"data/{DATASET_NAME}/pop_artists.csv"
+OUTPUT_DIR = f"data/{DATASET_NAME}"
 
 # Recording filters
 EXCLUDE_ALT_VERSIONS = True
@@ -493,7 +493,7 @@ def save_metadata(selected_artists, all_recordings, summary):
 
     metadata_path = os.path.join(
         OUTPUT_DIR,
-        "metadata.json"
+        "fetch_data_metadata.json"
     )
 
     with open(metadata_path, "w", encoding="utf-8") as f:

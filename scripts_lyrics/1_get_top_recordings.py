@@ -20,9 +20,8 @@ PROJECT_DIR = Path(__file__).resolve().parents[1]
 
 ARTISTS_FILE = (
     PROJECT_DIR
-    / "data_network"
-    / "data_2005_2025"
-    / "deduplicated"
+    / "data"
+    / "build_network"
     / "artists.csv"
 )
 

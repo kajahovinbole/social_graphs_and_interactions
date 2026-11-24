@@ -23,7 +23,10 @@ DATASET_NAME = "data_2005_2025"
 # Input / output
 DATA_DIR = "data/data_2005_2025/deduplicated/"
 
-ARTISTS_FILE = os.path.join(DATA_DIR, "artists.csv")
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ARTISTS_FILE = os.path.join(
+    PROJECT_DIR, "data", "build_network", "artists.csv"
+)
 EDGES_FILE = os.path.join(DATA_DIR, "edges.csv")
 
 OUTPUT_FILE = os.path.join(
