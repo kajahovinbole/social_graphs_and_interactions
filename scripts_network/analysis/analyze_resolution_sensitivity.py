@@ -3,7 +3,6 @@ from pathlib import Path
 
 import networkx as nx
 import pandas as pd
-from community import community_louvain
 from sklearn.metrics import normalized_mutual_info_score
 
 
@@ -68,12 +67,18 @@ def main():
 
     for resolution in RESOLUTIONS:
 
-        partition = community_louvain.best_partition(
+        communities = nx.community.louvain_communities(
             G,
             weight=WEIGHT,
             resolution=resolution,
-            random_state=RANDOM_SEED
+            seed=RANDOM_SEED,
         )
+
+        partition = {
+            node: community_id
+            for community_id, community in enumerate(communities)
+            for node in community
+        }
 
         partitions[resolution] = partition
 
@@ -88,18 +93,21 @@ def main():
             index=False
         )
 
-        num_communities = len(set(partition.values()))
+        num_communities = len(communities)
 
-        modularity = community_louvain.modularity(
-            partition,
+        # Compare all candidate partitions using the same standard modularity
+        # definition (gamma=1), independent of the Louvain search resolution.
+        standard_modularity = nx.community.modularity(
             G,
-            weight=WEIGHT
+            communities,
+            weight=WEIGHT,
+            resolution=1.0,
         )
 
         summary.append({
             "Resolution": resolution,
             "Communities": num_communities,
-            "Modularity": modularity
+            "Standard modularity (gamma=1)": standard_modularity
         })
 
 

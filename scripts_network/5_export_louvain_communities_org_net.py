@@ -25,6 +25,9 @@ EDGES_FILE = DATA_DIR / "edges.csv"
 OUTPUT_FILE = DATA_DIR / "collaboration_network.gexf"
 COMMUNITIES_FILE = DATA_DIR / "louvain_communities.csv"
 
+RESOLUTION = 1.2
+RANDOM_SEED = 42
+
 
 # --------------------------------------------------
 # MAIN
@@ -58,8 +61,8 @@ def main():
     communities = louvain_communities(
         G,
         weight="weight",
-        resolution=1,
-        seed=42
+        resolution=RESOLUTION,
+        seed=RANDOM_SEED
     )
 
     # Map each artist to a community ID
@@ -106,7 +109,9 @@ def main():
     print(f"Edges:              {G.number_of_edges()}")
     print(f"Connected components: {nx.number_connected_components(G)}")
     print(f"Communities:        {len(communities)}")
-    print(f"Modularity:         {modularity_score:.4f}")
+    print(f"Standard modularity (gamma=1): {modularity_score:.4f}")
+    print(f"Resolution:         {RESOLUTION}")
+    print(f"Random seed:        {RANDOM_SEED}")
     print(f"Isolates:           {nx.number_of_isolates(G)}")
     print(f"Artists assigned:   {assigned}")
     print(f"\nGEXF saved to:       {OUTPUT_FILE}")

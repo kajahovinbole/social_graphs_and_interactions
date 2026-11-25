@@ -50,7 +50,7 @@ Run the scripts from the repository root and in order. The fetch steps call exte
 | 3.1 | `scripts_network/3_1_deduplicate_recordings.py` | Excludes configured cases and groups likely versions of the same song. Writes `unique_songs.csv` and a recording-to-song mapping. |
 | 3.2 | `scripts_network/3_2_deduplicate_rapidfuzz.py` | Generates candidate duplicate pairs for manual review, then applies the decisions in `potential_duplicates_review.csv`. Writes `unique_songs_reviewed.csv`. |
 | 4 | `scripts_network/4_build_network.py` | Builds `network/nodes.csv`, `network/edges.csv`, an edge-to-song audit, and network metadata from the reviewed songs. |
-| 5 | `scripts_network/5_export_louvain_communities_org_net.py` | Finds Louvain communities in the original collaboration network and exports a GEXF file for Gephi. Writes `louvain_communities.csv`. |
+| 5 | `scripts_network/5_export_louvain_communities_org_net.py` | Finds NetworkX Louvain communities in the original network at resolution 1.2 and seed 42. Exports a GEXF file for Gephi and writes `louvain_communities.csv`. |
 | 6 | `scripts_network/6_disparicy_filter.py` | Applies the disparity filter at several alpha thresholds. Writes the edge tables under `network/backbone/`. |
 | 7 | `scripts_network/7_export_backbone_with_org_communities.py` | Exports the alpha 0.42 backbone to Gephi, retaining each artist’s community from the original network. |
 
@@ -102,12 +102,17 @@ The fetch scripts save progress so interrupted retrievals can resume. Embedding 
 
 ## Additional analysis and quality checks
 
+- `scripts_network/analysis/analyze_network_properties.py` calculates descriptive statistics and node-level metrics for the original network, and compares selected properties with the alpha 0.42 backbone. It writes tables and plots to `data/data_2005_2025_network/network/network_properties/`. Run it from the repository root with `uv run python scripts_network/analysis/analyze_network_properties.py`.
 - `scripts_embeddings/audit_lyrics.py` checks the current lyrics file for normalized duplicate texts, title/artist mismatches, and a small random sample for manual review. Reports go to `quality_audit/`.
 - `scripts_embeddings/robustness_test.py` compares the community-similarity result for all artists with the result after requiring at least three songs per artist.
 - `scripts_embeddings/visualize_communities_on_embeddings.py` creates a UMAP view of artist embeddings colored by original-network community.
 - `scripts_embeddings/visualize_similarities.py` plots pairwise similarity distributions from step 6.
 - `scripts_embeddings/visualise_permutaions.py` plots the permutation-test null distribution from step 6.
-- `scripts_network/analysis/` and `scripts_network/visualisations/` contain supporting network summaries and plots; these are not extra numbered pipeline steps.
+- `scripts_network/analysis/analyze_resolution_sensitivity.py` compares NetworkX partitions at resolutions 0.5, 0.8, 1.0, 1.2, and 1.5. It compares their standard modularity at gamma 1 and their pairwise NMI.
+- `scripts_network/analysis/analyze_louvain_stability.py` measures NetworkX partition stability over 50 seeds at the selected resolution (currently 1.2).
+- Resolution 1.2 is selected because its partition had the highest standard modularity (gamma=1) among the tested resolutions.
+- `scripts_network/analysis/compare_louvain_implementations.py` is a diagnostic comparison with the earlier `python-louvain` implementation; it is not part of the final analysis pipeline.
+- `scripts_network/visualisations/` contains supporting network plots; these are not extra numbered pipeline steps.
 
 ## Data and reproducibility notes
 

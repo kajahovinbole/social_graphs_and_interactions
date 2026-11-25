@@ -3,7 +3,6 @@ from pathlib import Path
 
 import networkx as nx
 import pandas as pd
-from community import community_louvain
 from sklearn.metrics import normalized_mutual_info_score
 
 
@@ -28,7 +27,7 @@ OUTPUT_DIR = NETWORK_DIR / "stability_runs_nmi"
 # --------------------------------------------------
 
 N_RUNS = 50
-RESOLUTION = 1.0
+RESOLUTION = 1.2
 WEIGHT = "weight"
 
 
@@ -67,12 +66,18 @@ def main():
 
     for seed in range(N_RUNS):
 
-        partition = community_louvain.best_partition(
+        communities = nx.community.louvain_communities(
             G,
             weight=WEIGHT,
             resolution=RESOLUTION,
-            random_state=seed
+            seed=seed,
         )
+
+        partition = {
+            node: community_id
+            for community_id, community in enumerate(communities)
+            for node in community
+        }
 
         labels = [
             partition[node]
